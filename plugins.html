@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Plugins | flatpickr - にほんご。</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="http://tr.you84815.space/flatpickr/favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="./css/fx.css">
+    <link rel="stylesheet" href="http://unpkg.com/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-106478577-1', 'auto');
+      //ga('send', 'pageview');
+    </script>
+    <script src="./js/highlight.pack.js"></script>
+    <script src="./js/barba.min.js"></script>
+    <script src="./js/base.js"></script>
+    <script src="http://unpkg.com/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/ja.js"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/plugins/confirmDate/confirmDate.js"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/plugins/weekSelect/weekSelect.js"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/plugins/rangePlugin.js"></script>
+  </head>
+</html>
+<body>
+  <header>
+    <div class="icon"><a class="no-barba" href="http://tr.you84815.space/"><img src="./img/icon.png"></a></div>
+    <div class="navi_toggle" onclick="toggleMenu()"><i class="menu-icon material-icons" id="navi_icon"></i></div>
+    <div class="title">flatpickr - <a class="no-barba" href="http://tr.you84815.space/">にほんご。</a></div>
+  </header>
+  <script>
+    toggleMenu = function() {
+      let navi = document.getElementsByClassName("navi");
+      navi[0].classList.toggle('show');
+      let navi_icon = document.getElementById("navi_icon");
+      navi_icon.classList.toggle('active');
+    }
+  </script>
+  <div id="barba-wrapper">
+    <div class="barba-container">
+      <div class="wrapper">
+        <div class="navi">
+          <h1><a href="./">Home</a></h1>
+          <h1><a href="./gettingStarted.html">Getting Started</a></h1>
+          <div class="hidden" id="navi_getting_started">
+            <ul>
+              <li class="installation"><a href="./gettingStarted.html#installation">Installation</a></li>
+              <li class="usage"><a href="./gettingStarted.html#usage">Usage</a></li>
+            </ul>
+          </div>
+          <h1><a href="./examples.html">Examples</a></h1>
+          <div class="hidden" id="navi_examples">
+            <ul>
+              <li class="basic"><a href="./examples.html#basic">基本</a></li>
+              <li class="date-time"><a href="./examples.html#date-time">時間指定</a></li>
+              <li class="human-friendly-dates"><a href="./examples.html#human-friendly-dates">表示用日付の指定</a></li>
+              <li class="supplying-dates-for-flatpickr"><a href="./examples.html#supplying-dates-for-flatpickr">日付形式指定</a></li>
+              <li class="preloading-a-date"><a href="./examples.html#preloading-a-date">日付の初期値設定</a></li>
+              <li class="mindate-and-maxdate"><a href="./examples.html#mindate-and-maxdate">minDate、maxDate</a></li>
+              <li class="disabling-dates"><a href="./examples.html#disabling-dates">特定の日付を無効化</a></li>
+              <li class="disabling-all-dates-except-select-few"><a href="./examples.html#disabling-all-dates-except-select-few">特定日付以外を無効化</a></li>
+              <li class="selecting-multiple-dates"><a href="./examples.html#selecting-multiple-dates">日付の複数選択</a></li>
+              <li class="range-calendar"><a href="./examples.html#range-calendar">日付の期間選択</a></li>
+              <li class="time-picker"><a href="./examples.html#time-picker">時間選択</a></li>
+              <li class="inline-calendar"><a href="./examples.html#inline-calendar">インライン表示</a></li>
+              <li class="display-week-numbers"><a href="./examples.html#display-week-numbers">週番号表示</a></li>
+              <li class="flatpickr-external-elements"><a href="./examples.html#flatpickr-external-elements">flatpickr + 外部要素</a></li>
+            </ul>
+          </div>
+          <h1><a href="./theFlatpickrInstance.html">The Flatpickr Instance</a></h1>
+          <div class="hidden" id="navi_theFlatpickrInstance">
+            <ul>
+              <li class="retrieving-the-flatpickr-instance"><a href="./theFlatpickrInstance.html#retrieving-the-flatpickr-instance">インスタンス生成</a></li>
+              <li class="properties"><a href="./theFlatpickrInstance.html#properties">プロパティ</a></li>
+              <li class="methods"><a href="./theFlatpickrInstance.html#methods">メソッド</a></li>
+              <li class="elements"><a href="./theFlatpickrInstance.html#elements">要素</a></li>
+              <li class="useful-prototype-methods"><a href="./theFlatpickrInstance.html#useful-prototype-methods">便利なプロトタイプメソッド</a></li>
+            </ul>
+          </div>
+          <h1><a href="./eventsAndHooks.html">Events & Hooks</a></h1>
+          <div class="hidden" id="navi_eventsAndHooks">
+            <ul>
+              <li class="events"><a href="./eventsAndHooks.html#events">イベント</a></li>
+              <li class="hooks"><a href="./eventsAndHooks.html#hooks">フック</a></li>
+            </ul>
+          </div>
+          <h1><a href="./configOptions.html">Options</a></h1>
+          <h1><a href="./formattingTokens.html">Formatting Tokens</a></h1>
+          <div class="hidden" id="navi_formattingTokens">
+            <ul>
+              <li class="date-formatting-tokens"><a href="./formattingTokens.html#date-formatting-tokens">日付フォーマット</a></li>
+              <li class="time-formatting-tokenshooks"><a href="./formattingTokens.html#time-formatting-tokenshooks">時刻フォーマット</a></li>
+            </ul>
+          </div>
+          <h1><a href="./localization.html">Localization</a></h1>
+          <div class="hidden" id="navi_localization">
+            <ul>
+              <li class="using-modules"><a href="./localization.html#using-modules">モジュール環境</a></li>
+              <li class="localization-in-a-browser-environment"><a href="./localization.html#localization-in-a-browser-environment">非モジュール環境</a></li>
+            </ul>
+          </div>
+          <h1><a class="active" href="./plugins.html">Plugins</a></h1>
+          <div id="navi_plugins">
+            <ul>
+              <li class="confirmDate"><a href="./plugins.html#confirmDate">confirmDate</a></li>
+              <li class="weekSelect"><a href="./plugins.html#weekSelect">weekSelect</a></li>
+            </ul>
+          </div>
+          <h1><a href="./themes.html">Themes</a></h1>
+          <div class="hidden" id="navi_themes">
+            <ul>
+              <li class="usage"><a href="./themes.html#usage">使い方</a></li>
+              <li class="available-themes"><a href="./themes.html#available-themes">利用可能なテーマ</a></li>
+            </ul>
+          </div>
+          <h1><a href="./mobileSupport.html">Mobile Support</a></h1>
+          <div class="hidden" id="navi_mobileSupport">
+            <ul>
+              <li class="native-datetime-input"><a href="./mobileSupport.html#native-datetime-input">ネイティブの日付入力について</a></li>
+            </ul>
+          </div>
+          <h1><a href="./usageInIE9.html">Usage in IE9</a></h1>
+          <h1><a href="./updatingFromFlatpickrV2.html">Updating from v2</a></h1>
+          <div class="hidden" id="navi_updatingFromFlatpickrV2">
+            <ul>
+              <li class="deprecation-of-the-utc-option"><a href="./updatingFromFlatpickrV2.html#deprecation-of-the-utc-option">utcオプションを非推奨化</a></li>
+              <li class="simplified-invocation"><a href="./updatingFromFlatpickrV2.html#simplified-invocation">呼び出しの簡素化</a></li>
+            </ul>
+          </div>
+          <hr>
+          <h1>HTML Source</h1>
+          <div id="navi_source"><a href="https://github.com/tobijibu/flatpickr/archive/master.zip"><i class="menu-icon material-icons">&#xE884;</i></a><a href="https://github.com/tobijibu/flatpickr/"><i class="menu-icon material-icons">&#xE86F;</i></a></div>
+        </div>
+        <div class="main">
+          <h1>Plugins</h1>
+          <p>プラグインは基本的に<a href="eventsAndHooks.html#hooks">フック</a>のセットで、
+            <a href="theFlatpickrInstance.html">インスタンス</a>とオプションを受け取ります。
+          </p>
+          <p>
+            通常ユーザーが欲しがるような機能はプラグインで実現することができます。
+            flatpickrにはいくつかの<a href="https://github.com/chmln/flatpickr/tree/master/dist/plugins" target="_blank">プラグイン</a>が付属しています。
+          </p>
+          <h2 id="confirmDate">confirmDate</h2>
+          <p>下記のいずれかを選択した場合に確認ボタンを表示します。</p>
+          <ul>
+            <li>日付、時刻を選択した時</li>
+            <li>複数の日付を選択した時</li>
+          </ul><br>
+          <h4>デモ</h4>
+          <h5>HTML</h5>
+          <pre><code class="html">&#x3C;script src=&#x22;https://npmcdn.com/flatpickr/dist/plugins/confirmDate/confirmDate.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;input class=&#x22;flatpickr&#x22; type=&#x22;text&#x22; placeholder=&#x22;Select Date..&#x22; readonly=&#x22;readonly&#x22;&#x3E;</code></pre>
+          <h5>JavaScript</h5>
+          <pre><code class="js">const config =  {
+  "enableTime": true,
+  "plugins": [new confirmDatePlugin({})]
+}
+flatpickr('.flatpickr', config);</code></pre>
+          <p>(※<code>script</code>タグで読み込む場合、<code>new confirmDatePlugin({})</code>ではなく<code>new confirmDate({})</code>として下さい。)</p>
+          <input class="fp_confirm_date" type="text" placeholder="Select Date.." readonly="readonly"><br><br>
+          <p>デフォルトではボタンにSVGアイコンが含まれていますが、ボタンを変更することができます。</p>
+          <p>以下が全てのオプションです。</p>
+          <pre><code class="js">{
+  confirmIcon: "&#x3C;i class='fa fa-check'&#x3E;&#x3C;/i&#x3E;", // アイコンを変更したい場合はHTML形式で記述します
+  confirmText: "OK ",
+  showAlways: false,
+  theme: "light" // or "dark"
+}</code></pre><br>
+          <h4>デモ</h4>
+          <h5>HTML</h5>
+          <pre><code class="html">&#x3C;script src=&#x22;https://npmcdn.com/flatpickr/dist/plugins/confirmDate/confirmDate.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;input class=&#x22;flatpickr&#x22; type=&#x22;text&#x22; placeholder=&#x22;Select Date..&#x22; readonly=&#x22;readonly&#x22;&#x3E;</code></pre>
+          <h5>JavaScript</h5>
+          <pre><code class="js">config =  {
+  "enableTime": true,
+  "plugins": [new confirmDatePlugin({
+    confirmIcon: "&#x3C;i class='material-icons'&#x3E;check&#x3C;/i&#x3E;",
+    confirmText: "おーけー ",
+    showAlways: false,
+    theme: "dark" // or "light"
+  })],
+}
+flatpickr('.fp_confirm_date_opt', config);</code></pre>
+          <p>(※<code>script</code>タグで読み込む場合、<code>new confirmDatePlugin({})</code>ではなく<code>new confirmDate({})</code>として下さい。)</p>
+          <input class="fp_confirm_date_opt" type="text" placeholder="Select Date.." readonly="readonly"><br><br>
+          <h2 id="weekSelect">weekSelect</h2>
+          <p>週選択が可能になります。</p>
+          <h4>デモ</h4>
+          <h5>HTML</h5>
+          <pre><code class="html">&#x3C;script src=&#x22;https://npmcdn.com/flatpickr/dist/plugins/weekSelect/weekSelect.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;input class=&#x22;flatpickr&#x22; type=&#x22;text&#x22; placeholder=&#x22;Select Date..&#x22; readonly=&#x22;readonly&#x22;&#x3E;</code></pre>
+          <h5>JavaScript</h5>
+          <pre><code class="js">const config = {
+  "plugins": [new weekSelectPlugin({})],
+  "onChange": [function(){
+    // extract the week number
+    // note: "this" is bound to the flatpickr instance
+    const weekNumber = this.selectedDates[0]
+        ? this.config.getWeek(this.selectedDates[0])
+        : null;
+ 
+    console.log(weekNumber);
+  }]
+};
+flatpickr('.flatpickr', config);</code></pre>
+          <p>(※<code>script</code>タグで読み込む場合、<code>new weekSelectPlugin({})</code>ではなく<code>new weekSelect({})</code>として下さい。)</p>
+          <input class="fp_week_select" type="text" placeholder="Select Date.." readonly="readonly"><br>
+          <h2 id="rangPlugin">rangePlugin(β)</h2>
+          <p>日付の範囲を2つの入力欄で入力可能になります。</p>
+          <h4>デモ</h4>
+          <h5>HTML</h5>
+          <pre><code class="html">&#x3C;script src=&#x22;https://npmcdn.com/flatpickr/dist/plugins/rangePlugin.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;div style=&#x22;display: flex;&#x22;&#x3E;
+  &#x3C;p&#x3E;&#x3C;span&#x3E;Date1&#x3C;/span&#x3E;&#x3C;br&#x3E;
+    &#x3C;input class=&#x22;fp_range&#x22; data-id=&#x22;rangePlugin&#x22; type=&#x22;text&#x22; placeholder=&#x22;Select Date..&#x22; readonly=&#x22;readonly&#x22;&#x3E;
+  &#x3C;/p&#x3E;
+  &#x3C;p&#x3E;&#x3C;span&#x3E;Date2&#x3C;/span&#x3E;&#x3C;br&#x3E;
+    &#x3C;input class=&#x22;fp_range&#x22; id=&#x22;secondRangeInput&#x22; type=&#x22;text&#x22; placeholder=&#x22;Select Date..&#x22; readonly=&#x22;readonly&#x22;&#x3E;
+  &#x3C;/p&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+          <h5>JavaScript</h5>
+          <pre><code class="js">const config = {
+  "plugins": [new rangePlugin({ input: "#secondRangeInput"})]
+};
+flatpickr('.flatpickr', config);</code></pre>
+          <div style="display: flex;">
+            <p><span>Date1</span><br>
+              <input class="fp_range" data-id="rangePlugin" type="text" placeholder="Select Date.." readonly="readonly">
+            </p>
+            <p><span>Date2</span><br>
+              <input class="fp_range" id="secondRangeInput" type="text" placeholder="Select Date.." readonly="readonly">
+            </p>
+          </div>
+          <script class="load">
+            createObj = function() {
+              let config =  {
+                "enableTime": true,
+                "plugins": [new confirmDate({})]
+              }
+              flatpickr('.fp_confirm_date', config);
+            
+              config =  {
+                "enableTime": true,
+                "plugins": [new confirmDate({
+                  confirmIcon: "<i class='material-icons'>check</i>",
+                  confirmText: "おーけー ",
+                  showAlways: false,
+                  theme: "dark"
+                })],
+              }
+              flatpickr('.fp_confirm_date_opt', config);
+            
+              config =  {
+                "plugins": [new weekSelect({})],
+                "onChange": [function(){
+                  // extract the week number
+                  // note: "this" is bound to the flatpickr instance
+                  const weekNumber = this.selectedDates[0]
+                      ? this.config.getWeek(this.selectedDates[0])
+                      : null;
+            
+                  console.log(weekNumber);
+                }]
+              }
+              flatpickr('.fp_week_select', config);
+            
+              config = {
+                "plugins": [new rangePlugin({ input: "#secondRangeInput"})]
+              };
+              flatpickr('.fp_range', config);
+            };
+          </script>
+          <div class="license">
+            <p>
+              &copy; 2017
+               Gregory Petrosyan Released under the <a href="https://github.com/chmln/flatpickr/blob/master/LICENSE.md">MIT license</a>
+            </p>
+            <p>このコンテンツはGregory Petrosyan(chmln)による<a href="https://chmln.github.io/flatpickr/">flatpickrドキュメント</a>を翻訳/改変したものです。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer><span>
+       &copy; 
+      <script>document.write((new Date()).getFullYear());</script> tobijibu</span></footer>
+  <script src="./js/main.js"></script>
+  <script src="./js/barba_common.js"></script>
+</body>
