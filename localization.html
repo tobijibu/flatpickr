@@ -45,94 +45,178 @@
       navi_icon.classList.toggle('active');
     }
   </script>
-  <div id="barba-wrapper">
-    <div class="barba-container">
-      <div class="wrapper">
-        <div class="navi">
-          <ul>
-            <li><a href="./">Home</a></li>
-            <li><a href="./gettingStarted.html">Getting Started</a>
-              <ul class="hidden" id="navi_getting_started">
-                <li class="installation"><a href="./gettingStarted.html#installation">Installation</a></li>
-                <li class="usage"><a href="./gettingStarted.html#usage">Usage</a></li>
-              </ul>
-            </li>
-            <li><a href="./examples.html">Examples</a>
-              <ul class="hidden" id="navi_examples">
-                <li class="basic"><a href="./examples.html#basic">基本</a></li>
-                <li class="date-time"><a href="./examples.html#date-time">時間指定</a></li>
-                <li class="human-friendly-dates"><a href="./examples.html#human-friendly-dates">表示用日付の指定</a></li>
-                <li class="supplying-dates-for-flatpickr"><a href="./examples.html#supplying-dates-for-flatpickr">日付形式指定</a></li>
-                <li class="preloading-a-date"><a href="./examples.html#preloading-a-date">日付の初期値設定</a></li>
-                <li class="mindate-and-maxdate"><a href="./examples.html#mindate-and-maxdate">minDate、maxDate</a></li>
-                <li class="disabling-dates"><a href="./examples.html#disabling-dates">特定の日付を無効化</a></li>
-                <li class="disabling-all-dates-except-select-few"><a href="./examples.html#disabling-all-dates-except-select-few">特定日付以外を無効化</a></li>
-                <li class="selecting-multiple-dates"><a href="./examples.html#selecting-multiple-dates">日付の複数選択</a></li>
-                <li class="range-calendar"><a href="./examples.html#range-calendar">日付の期間選択</a></li>
-                <li class="time-picker"><a href="./examples.html#time-picker">時間選択</a></li>
-                <li class="inline-calendar"><a href="./examples.html#inline-calendar">インライン表示</a></li>
-                <li class="display-week-numbers"><a href="./examples.html#display-week-numbers">週番号表示</a></li>
-                <li class="flatpickr-external-elements"><a href="./examples.html#flatpickr-external-elements">flatpickr + 外部要素</a></li>
-              </ul>
-            </li>
-            <li><a href="./theFlatpickrInstance.html">The Flatpickr Instance</a>
-              <ul class="hidden" id="navi_theFlatpickrInstance">
-                <li class="retrieving-the-flatpickr-instance"><a href="./theFlatpickrInstance.html#retrieving-the-flatpickr-instance">インスタンス生成</a></li>
-                <li class="properties"><a href="./theFlatpickrInstance.html#properties">プロパティ</a></li>
-                <li class="methods"><a href="./theFlatpickrInstance.html#methods">メソッド</a></li>
-                <li class="elements"><a href="./theFlatpickrInstance.html#elements">要素</a></li>
-                <li class="useful-prototype-methods"><a href="./theFlatpickrInstance.html#useful-prototype-methods">便利なプロトタイプメソッド</a></li>
-              </ul>
-            </li>
-            <li><a href="./eventsAndHooks.html">Events & Hooks</a>
-              <ul class="hidden" id="navi_eventsAndHooks">
-                <li class="events"><a href="./eventsAndHooks.html#events">イベント</a></li>
-                <li class="hooks"><a href="./eventsAndHooks.html#hooks">フック</a></li>
-              </ul>
-            </li>
-            <li><a href="./configOptions.html">Options</a></li>
-            <li><a href="./formattingTokens.html">Formatting Tokens</a>
-              <ul class="hidden" id="navi_formattingTokens">
-                <li class="date-formatting-tokens"><a href="./formattingTokens.html#date-formatting-tokens">日付フォーマット</a></li>
-                <li class="time-formatting-tokenshooks"><a href="./formattingTokens.html#time-formatting-tokenshooks">時刻フォーマット</a></li>
-              </ul>
-            </li>
-            <li><a class="active" href="./localization.html">Localization</a>
-              <ul id="navi_localization">
-                <li class="using-modules"><a href="./localization.html#using-modules">モジュール環境</a></li>
-                <li class="localization-in-a-browser-environment"><a href="./localization.html#localization-in-a-browser-environment">非モジュール環境</a></li>
-              </ul>
-            </li>
-            <li><a href="./plugins.html">Plugins</a>
-              <ul class="hidden" id="navi_plugins">
-                <li class="confirmDate"><a href="./plugins.html#confirmDate">confirmDate</a></li>
-                <li class="weekSelect"><a href="./plugins.html#weekSelect">weekSelect</a></li>
-              </ul>
-            </li>
-            <li><a href="./themes.html">Themes</a>
-              <ul class="hidden" id="navi_themes">
-                <li class="usage"><a href="./themes.html#usage">使い方</a></li>
-                <li class="available-themes"><a href="./themes.html#available-themes">利用可能なテーマ</a></li>
-              </ul>
-            </li>
-            <li><a href="./mobileSupport.html">Mobile Support</a>
-              <ul class="hidden" id="navi_mobileSupport">
-                <li class="native-datetime-input"><a href="./mobileSupport.html#native-datetime-input">ネイティブの日付入力について</a></li>
-              </ul>
-            </li>
-            <li><a href="./usageInIE9.html">Usage in IE9</a></li>
-            <li><a href="./updatingFromFlatpickrV2.html">Updating from v2</a>
-              <ul class="hidden" id="navi_updatingFromFlatpickrV2">
-                <li class="deprecation-of-the-utc-option"><a href="./updatingFromFlatpickrV2.html#deprecation-of-the-utc-option">utcオプションを非推奨化</a></li>
-                <li class="simplified-invocation"><a href="./updatingFromFlatpickrV2.html#simplified-invocation">呼び出しの簡素化</a></li>
-              </ul>
-            </li>
-            <hr>
-            <li>HTML Source
-              <div id="navi_source"><a href="https://github.com/tobijibu/flatpickr/archive/master.zip"><i class="menu-icon material-icons">&#xE884;</i></a><a href="https://github.com/tobijibu/flatpickr/"><i class="menu-icon material-icons">&#xE86F;</i></a></div>
-            </li>
+  <div class="wrapper">
+    <div class="navi">
+      <ul class="menu">
+        <li><a class="index" href="./index.html">Home</a></li>
+        <li><a class="gettingStarted" href="./gettingStarted.html">Getting Started</a>
+          <ul class="hidden" id="navi_gettingStarted">
+            <li><a href="./gettingStarted.html#installation">Installation</a></li>
+            <li><a href="./gettingStarted.html#usage">Usage</a></li>
           </ul>
-        </div>
+        </li>
+        <li><a class="examples" href="./examples.html">Examples</a>
+          <ul class="hidden" id="navi_examples">
+            <li><a href="./examples.html#basic">基本</a></li>
+            <li><a href="./examples.html#date-time">時間指定</a></li>
+            <li><a href="./examples.html#human-friendly-dates">表示用日付の指定</a></li>
+            <li><a href="./examples.html#supplying-dates-for-flatpickr">日付形式指定</a></li>
+            <li><a href="./examples.html#preloading-a-date">日付の初期値設定</a></li>
+            <li><a href="./examples.html#mindate-and-maxdate">minDate、maxDate</a></li>
+            <li><a href="./examples.html#disabling-dates">特定の日付を無効化</a></li>
+            <li><a href="./examples.html#disabling-all-dates-except-select-few">特定日付以外を無効化</a></li>
+            <li><a href="./examples.html#selecting-multiple-dates">日付の複数選択</a></li>
+            <li><a href="./examples.html#range-calendar">日付の期間選択</a></li>
+            <li><a href="./examples.html#time-picker">時間選択</a></li>
+            <li><a href="./examples.html#inline-calendar">インライン表示</a></li>
+            <li><a href="./examples.html#display-week-numbers">週番号表示</a></li>
+            <li><a href="./examples.html#flatpickr-external-elements">flatpickr + 外部要素</a></li>
+          </ul>
+        </li>
+        <li><a class="theFlatpickrInstance" href="./theFlatpickrInstance.html">The Flatpickr Instance</a>
+          <ul class="hidden" id="navi_theFlatpickrInstance">
+            <li><a href="./theFlatpickrInstance.html#retrieving-the-flatpickr-instance">インスタンス生成</a></li>
+            <li><a href="./theFlatpickrInstance.html#properties">プロパティ</a></li>
+            <li><a href="./theFlatpickrInstance.html#methods">メソッド</a></li>
+            <li><a href="./theFlatpickrInstance.html#elements">要素</a></li>
+            <li><a href="./theFlatpickrInstance.html#useful-prototype-methods">便利なプロトタイプメソッド</a></li>
+          </ul>
+        </li>
+        <li><a class="eventsAndHooks" href="./eventsAndHooks.html">Events & Hooks</a>
+          <ul class="hidden" id="navi_eventsAndHooks">
+            <li><a href="./eventsAndHooks.html#events">イベント</a></li>
+            <li><a href="./eventsAndHooks.html#hooks">フック</a></li>
+          </ul>
+        </li>
+        <li><a class="configOptions" href="./configOptions.html">Options</a></li>
+        <li><a class="formattingTokens" href="./formattingTokens.html">Formatting Tokens</a>
+          <ul class="hidden" id="navi_formattingTokens">
+            <li><a href="./formattingTokens.html#date-formatting-tokens">日付フォーマット</a></li>
+            <li><a href="./formattingTokens.html#time-formatting-tokenshooks">時刻フォーマット</a></li>
+          </ul>
+        </li>
+        <li><a class="localization active" href="./localization.html">Localization</a>
+          <ul id="navi_localization">
+            <li><a href="./localization.html#using-modules">モジュール環境</a></li>
+            <li><a href="./localization.html#localization-in-a-browser-environment">非モジュール環境</a></li>
+          </ul>
+        </li>
+        <li><a class="plugins" href="./plugins.html">Plugins</a>
+          <ul class="hidden" id="navi_plugins">
+            <li><a href="./plugins.html#confirmDate">confirmDate</a></li>
+            <li><a href="./plugins.html#weekSelect">weekSelect</a></li>
+          </ul>
+        </li>
+        <li><a class="themes" href="./themes.html">Themes</a>
+          <ul class="hidden" id="navi_themes">
+            <li><a href="./themes.html#usage">使い方</a></li>
+            <li><a href="./themes.html#available-themes">利用可能なテーマ</a></li>
+          </ul>
+        </li>
+        <li><a class="mobileSupport" href="./mobileSupport.html">Mobile Support</a>
+          <ul class="hidden" id="navi_mobileSupport">
+            <li><a href="./mobileSupport.html#native-datetime-input">ネイティブの日付入力について</a></li>
+          </ul>
+        </li>
+        <li><a class="usageInIE9" href="./usageInIE9.html">Usage in IE9</a></li>
+        <li><a class="updatingFromFlatpickrV2" href="./updatingFromFlatpickrV2.html">Updating from v2</a>
+          <ul class="hidden" id="navi_updatingFromFlatpickrV2">
+            <li><a href="./updatingFromFlatpickrV2.html#deprecation-of-the-utc-option">utcオプションを非推奨化</a></li>
+            <li><a href="./updatingFromFlatpickrV2.html#simplified-invocation">呼び出しの簡素化</a></li>
+          </ul>
+        </li>
+      </ul>
+      <hr>
+      <ul>
+        <li>HTML Source
+          <div id="navi_source"><a href="https://github.com/tobijibu/undefinedarchive/master.zip"><i class="menu-icon material-icons">&#xE884;</i></a><a href="https://github.com/tobijibu/undefined"><i class="menu-icon material-icons">&#xE86F;</i></a></div>
+        </li>
+      </ul>
+      <div id="gcs" data-id="017083506626304158170:rbpj0mlfvjq">
+        <script>
+          (function() {
+            var cx = document.getElementById('gcs').getAttribute('data-id');
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+          })();
+        </script>
+        <gcse:search linkTarget=""></gcse:search>
+      </div>
+      <style>
+        .cse .gsc-control-cse,
+        .gsc-control-cse {
+          border: 0px solid #fff;
+          padding: 0;
+        }
+        /* 検索ボックス */
+        .gsc-input-box {
+          border: 0px solid #fff;
+          border-bottom: 1px solid #000;
+        }
+        .gsc-search-box-tools .gsc-search-box .gsc-input {
+          padding-right: 0px;
+        }
+        .gsc-search-box .gsc-input>input:hover,
+        .gsc-input-box-hover {
+          border: 1px solid #fff;
+          border-bottom: 1px solid #333;
+          border-top-color: #fff;
+          -moz-box-shadow: none;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+        }
+        .gsc-search-box .gsc-input>input:focus,
+        .gsc-input-box-focus {
+          border: 1px solid #fff;
+          border-bottom: 1px solid #333;
+          -moz-box-shadow: none;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+        }
+        .gsib_a {
+          padding-top: 2px;
+        }
+        .gsst_a .gscb_a {
+          color: #aaa;
+        }
+        /* 検索ボタン */
+        input.gsc-search-button {
+          margin-left: 0;
+        }
+        .cse .gsc-search-button input.gsc-search-button-v2,
+        input.gsc-search-button-v2 {
+          padding: 6px;
+          margin-top: 5px;
+        }
+        .cse input.gsc-search-button,
+        input.gsc-search-button {
+          color: #fff;
+          border: 1px solid #000;
+          border-radius: 0;
+          -moz-border-radius: 0;
+          -webkit-border-radius: 0;
+          background-color: #000;
+          background-image: none;
+          filter: none;
+          transition: .4s;
+        }
+        .cse input.gsc-search-button:hover,
+        input.gsc-search-button:hover {
+          color: #333;
+          border-color: #333;
+          background-color: #333;
+          background-image: none;
+          filter: none;
+          transition: .4s;
+        }
+      </style>
+    </div>
+    <div id="barba-wrapper">
+      <div class="barba-container">
         <div class="main">
           <h1>Localization</h1>
           <p>flatpickrは<a href="https://github.com/chmln/flatpickr/tree/master/dist/l10n" target="_blank">沢山の言語</a>をサポートしています。</p>
