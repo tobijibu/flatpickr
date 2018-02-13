@@ -1,1 +1,0 @@
-hljs.registerLanguage("txt",function(t){return{cI:!1}});
