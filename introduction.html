@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>Formatting Tokens | flatpickr - にほんご。</title>
+    <title>Introduction | flatpickr - にほんご。</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:title" content="Formatting Tokens | flatpickr - にほんご。">
+    <meta property="og:title" content="Introduction | flatpickr - にほんご。">
     <meta property="og:url">
     <meta property="og:type" content="article">
     <link rel="icon" href="https://tr.you84815.space/flatpickr/favicon.ico">
@@ -42,7 +42,7 @@
     <div class="navi">
       <ul class="menu">
         <li><a class="index" href="./index.html">Home</a></li>
-        <li><a class="introduction" href="./introduction.html">Introduction</a></li>
+        <li><a class="introduction active" href="./introduction.html">Introduction</a></li>
         <li><a class="gettingStarted" href="./gettingStarted.html">Getting Started</a>
           <ul class="hidden" id="navi_gettingStarted">
             <li><a href="./gettingStarted.html#installation">Installation</a></li>
@@ -84,8 +84,8 @@
           </ul>
         </li>
         <li><a class="configOptions" href="./configOptions.html">Options</a></li>
-        <li><a class="formattingTokens active" href="./formattingTokens.html">Formatting Tokens</a>
-          <ul id="navi_formattingTokens">
+        <li><a class="formattingTokens" href="./formattingTokens.html">Formatting Tokens</a>
+          <ul class="hidden" id="navi_formattingTokens">
             <li><a href="./formattingTokens.html#date-formatting-tokens">日付フォーマット</a></li>
             <li><a href="./formattingTokens.html#time-formatting-tokenshooks">時刻フォーマット</a></li>
             <li><a href="./formattingTokens.html#escaping-formatting-tokens">エスケープ</a></li>
@@ -126,139 +126,19 @@
     <div id="barba-wrapper">
       <div class="barba-container">
         <div class="main">
-          <h1>Formatting Tokens</h1>
-          <p>ここではflatpikrで指定可能なフォーマットトークンについて説明しています。</p>
-          <p>フォーマットは<code>dateFormat</code>と<code>altFormat</code>で利用することができます。</p>
-          <h2 id="date-formatting-tokens">日付フォーマット</h2>
-          <table class="my-table">
-            <tr>
-              <th>文字</th>
-              <th>詳細</th>
-              <th>表示例</th>
-            </tr>
-            <tr>
-              <td>d</td>
-              <td>日付の数字。2桁。</td>
-              <td>01 ～ 31</td>
-            </tr>
-            <tr>
-              <td>D</td>
-              <td>日付の曜日。</td>
-              <td>Mon ～ Sun</td>
-            </tr>
-            <tr>
-              <td>l(小文字"L")</td>
-              <td>日付の曜日。略しません。</td>
-              <td>Sunday ～ Saturday</td>
-            </tr>
-            <tr>
-              <td>j</td>
-              <td>日付の数字。0をつけません。</td>
-              <td>1 ～ 31</td>
-            </tr>
-            <tr>
-              <td>J</td>
-              <td>日付の英語形式の序数サフィックス。</td>
-              <td>1st, 2nd, ～ 31st</td>
-            </tr>
-            <tr>
-              <td>w</td>
-              <td>曜日の数値表現。</td>
-              <td>0(日曜) ～ 6(土曜)</td>
-            </tr>
-            <tr>
-              <td>F</td>
-              <td>月の文字列。略しません。</td>
-              <td>January ～ December</td>
-            </tr>
-            <tr>
-              <td>m</td>
-              <td>月の数字。2桁。</td>
-              <td>01 ～ 12</td>
-            </tr>
-            <tr>
-              <td>n</td>
-              <td>月の数字。0をつけません。</td>
-              <td>1 ～ 12</td>
-            </tr>
-            <tr>
-              <td>M</td>
-              <td>月の文字列。</td>
-              <td>Jan ～ Dec</td>
-            </tr>
-            <tr>
-              <td>U</td>
-              <td><a href="https://ja.wikipedia.org/wiki/UNIX%E6%99%82%E9%96%93" target="_blank">Unix時間</a>。1970/01/01 00:000:00からの秒数。</td>
-              <td>1413704993</td>
-            </tr>
-            <tr>
-              <td>y</td>
-              <td>年の数字。下2桁。</td>
-              <td>99 や 03等</td>
-            </tr>
-            <tr>
-              <td>Y</td>
-              <td>年の数字。4桁。</td>
-              <td>1999 や 2003等</td>
-            </tr>
-            <tr>
-              <td>Z</td>
-              <td>ISO Date。</td>
-              <td>2017-03-04T01:23:43.000Z</td>
-            </tr>
-          </table>
-          <h2 id="time-formatting-tokenshooks">時刻フォーマット</h2>
-          <table class="my-table">
-            <tr>
-              <th>文字</th>
-              <th>詳細</th>
-              <th>表示例</th>
-            </tr>
-            <tr>
-              <td>H</td>
-              <td>時(24時間)</td>
-              <td>00 ～ 23</td>
-            </tr>
-            <tr>
-              <td>h</td>
-              <td>時(12時間)</td>
-              <td>1 ～ 12</td>
-            </tr>
-            <tr>
-              <td>i</td>
-              <td>分</td>
-              <td>00 ～ 59</td>
-            </tr>
-            <tr>
-              <td>S</td>
-              <td>秒。2桁。</td>
-              <td>00 ～ 59</td>
-            </tr>
-            <tr>
-              <td>s</td>
-              <td>秒。</td>
-              <td>0、1 ～ 59</td>
-            </tr>
-            <tr>
-              <td>K</td>
-              <td>AM/PM</td>
-              <td>AM または PM</td>
-            </tr>
-          </table>
-          <h2 id="escaping-formatting-tokens">エスケープ</h2>
-          <p><code>\\</code>を使ってフォーマットトークンをエスケープすることができます。</p>
-          <pre><code class="js">{
-    dateFormat: "Y-m-d\\Z", // 2017-01-22Zというように表示されます。
-}</code></pre>
-          <input class="fp_esc" type="text" placeholder="Select Date.." readonly="readonly">
-          <script class="load">
-            createObj = function() {
-              const config  = {
-                dateFormat: 'Y-m-d\\Z'
-              }
-              flatpickr('.fp_esc', config);
-            }
-          </script>
+          <h1>Introduction</h1>
+          <h2 id="installation">イントロダクション</h2>
+          <p><code>flatpickr</code>は軽量かつ高機能なdate-pickerです。</p>
+          <p>
+            無駄がなく、UX-drivenで拡張可能であり、どのライブラリにも依存しません。
+            ミニマルなUIで多くのテーマがあります。
+            豊富なAPIとイベントはどんな環境にも適しています。
+          </p>
+          <p>
+            "無駄がない"とは、小さいサイズでよりよいパフォーマンスを生むことを意味しており、
+            カレンダーに8つのライブラリをロードする必要が無いことを示しています。
+          </p>
+          <p>次のセクションに進んでみましょう。</p>
           <div class="license">
             <p>
               &copy; 2017
