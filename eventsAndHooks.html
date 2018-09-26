@@ -1,333 +1,117 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Events &amp; Hooks | flatpickr - にほんご。</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:title" content="Events &amp; Hooks | flatpickr - にほんご。">
-    <meta property="og:url">
-    <meta property="og:type" content="article">
-    <link rel="icon" href="https://tr.you84815.space/flatpickr/favicon.ico">
-    <style>html{overflow-y:scroll}#navi ul,body{margin:0;padding:0}body{font-family:"游ゴシック Medium","Yu Gothic Medium",YuGothic,'Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ',Meiryo,sans-serif;font-feature-settings:"palt";letter-spacing:.8pt;word-wrap:break-word;line-height:1.76;color:#000;text-shadow:0 0 0 #000}#container{display:grid;grid-template-columns:240px auto;grid-template-rows:54px auto auto;grid-template-areas:' header header  ' ' navi   content ' ' footer footer  '}footer,header{grid-area:header;grid-column:1/3;grid-row:1/2}#content,#navi{grid-area:navi;grid-column:1/2;grid-row:2/3}#content{grid-area:content;grid-column:2/3;margin-left:-240px}footer{grid-area:footer;grid-row:3/4;height:2em;line-height:1.6;font-size:.72rem;text-align:right}@media screen and (max-width:1200px){#container{grid-template-columns:100%;grid-template-rows:70px auto auto}#content,#navi,header{grid-column:1}#content{margin-left:0}}code{margin:0 2px;padding:2px 4px;font-family:Consolas,Monaco,"游ゴシック Medium","Yu Gothic Medium",YuGothic,'Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ',Meiryo,monospace;background-color:#e0e0e0;font-size:.88em}pre{margin:.8em 0 0;color:#333;line-height:1.4;letter-spacing:normal}pre>code{background-color:transparent;font-size:.88rem}blockquote{margin-left:0;padding-left:1em;color:#666;font-size:.8rem;border-left:2px solid #e0e0e0}dd{margin-left:1em}ul{padding-left:1.6em}.table-box,pre{overflow-x:auto}.my-table,.my-table td,pre{border:1px solid #e0e0e0}.my-table{border-collapse:collapse;width:100%}.my-table th{border:1px solid #333;vertical-align:top;background-color:#333;color:#fff}.my-table th.detail{min-width:16em}.my-table td{vertical-align:top;padding:16px 8px;word-wrap:break-word}.nowrap{white-space:nowrap}header{display:flex;align-items:center;height:3.4em;padding:16px;position:fixed;z-index:99;box-sizing:border-box;background-color:rgba(255,255,255,.8)}.navi_toggle{font-size:.8rem;width:1.6em;padding-top:.4em;display:none;position:relative}.icon svg,.navi_toggle svg{position:absolute;top:0;right:0;bottom:0;left:0;margin:auto;width:2em}#menu_close,#navi .hidden{display:none}.icon{width:32px;height:32px;display:block;position:relative}.icon svg{width:16px;height:16px}.title{font-size:.8rem;padding:1.1em 1em .9em}#navi a,.title a{color:#000;text-decoration:none}#navi{padding-left:1.5em;height:calc(100% - 54px);overflow-y:auto;margin-top:54px;position:fixed;width:240px;box-sizing:border-box}.navi{display:block}#navi .s-title{font-size:.72rem;color:#666}#navi ul{list-style-type:none}#navi li{font-size:1rem;text-shadow:none;margin:.64em 0}#navi li li,#navi li li li{font-size:.8rem;text-shadow:none;margin:.48em .48em .48em .56em}#navi li li li{text-shadow:0 0 0 #000;margin:.48em .48em .48em .96em;font-weight:400}#navi a{transition:.4s;border-bottom:1px #fff solid}#navi a.active,#navi li,#navi li li{font-weight:700}#navi a.active::before{content:'\bb \20 ';font-size:.96em;margin-left:-.97em}#navi hr{border-top:1px solid #e0e0e0;width:200px;margin:2.4em 0}#navi::-webkit-scrollbar{width:4px}#navi::-webkit-scrollbar-thumb{background-color:rgba(238,238,238,.3)}#navi:hover::-webkit-scrollbar-thumb{background-color:#e0e0e0}#navi_source{margin-top:1em}#navi_source a{margin-left:2.4em;font-weight:400}#main .share_link svg,#navi_source svg{width:1.72em}#main{width:640px;margin:0 auto;height:100%;box-sizing:border-box}#main a{transition:.3s;color:#333;text-decoration:none;border-bottom:1px solid #e0e0e0}.license{margin-bottom:2.4em;line-height:1.6;font-size:.72rem}footer>span{background-color:rgba(255,255,255,.8);padding:4px;position:fixed;bottom:4px;right:8px}#main .share_link,.license{text-align:right}#main .share_link a{width:40px;text-shadow:none;margin-left:16px;color:#aaa;border-bottom:0}a.i-hatena{position:relative}a.i-hatena>span{position:absolute;left:.25em;font-family:Verdana;font-weight:700;color:#fff;font-style:normal;line-height:1.84}@media screen and (max-width:1200px){html{font-size:16px}#navi,header{width:100%}.navi_toggle{width:32px;height:32px;display:block}.icon{display:none}#navi{font-size:16px;margin-top:16px;position:fixed;top:1.6em;background-color:rgba(255,255,255,.8);z-index:99;height:100%}#navi li{font-size:1.2em;margin:.8em 0}#navi li li,#navi li li li{font-size:.8em;margin:1em 0 0 1em}.navi{margin-left:-1600px}.show{margin-left:0}#main{width:100%;padding:1.6em}#main>div{margin:0}}html{font-size:16px}#main{line-height:1.6}#main h1,#main h2,#main h5,#main h6{font-weight:400}#main h1{margin-bottom:.5em;text-shadow:none}#main h3,#main h4,#main h5,#main h6{margin:2em 0 1em}#main h2{text-shadow:none;margin:0 0 .4em;padding-top:2em}#main h5,#main h6{text-decoration:underline}#update_date,p.note{color:#666;font-size:.72rem}#main span.args,#main span.type,sup{color:#666}ul.none{list-style-type:none}ul.disc{list-style-type:disc}ul.num{list-style-type:decimal}#main li{margin:.64em 0}hr{border-top:1px solid #e0e0e0}img{max-width:100%}#update_date{text-align:right}.search-box{margin:2.4em 0;width:200px}.cse .gsc-control-cse,div.gsc-control-cse{border:0;padding:0}div.gsc-input-box{border:0;border-bottom:1px solid #000}form.gsc-search-box-tools .gsc-search-box td.gsc-input{padding-right:0}div.gsc-input-box-focus,div.gsc-search-box td.gsc-input>input:focus{border:0;border-bottom:1px solid #333;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none}td.gsib_a{padding-top:5px}a.gsst_a span.gscb_a{color:#aaa}button.gsc-search-button{margin-left:0}.cse .gsc-search-button button.gsc-search-button-v2,button.gsc-search-button-v2{padding:6px}.cse button.gsc-search-button,button.gsc-search-button{color:#fff;border:0;border-bottom:1px solid #000;border-radius:0;-moz-border-radius:0;-webkit-border-radius:0;background-color:#000;background-image:none;filter:none}@media screen and (max-width:1120px){.search-box{width:90%}}::selection{background:#bbdefb}::-moz-selection{background:#bbdefb}#main a:hover,#main a:visited:hover,#navi a:hover{color:#2196f3}.icon svg rect{fill:#2196f3}.flatpickr-calendar{text-shadow:none}</style>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      
-      ga('create', 'UA-106478577-1', 'auto');
-    </script>
-  </head>
-  <body>
-    <div id="container">
-      <header>
-        <div class="icon"><a class="no-barba" href="https://tr.you84815.space/">
-            <svg>
-              <rect width="16" height="16" fill="#e0e0e0"></rect>
-            </svg></a></div>
-        <div class="navi_toggle" onclick="toggleMenu()">
-          <svg id="menu_close" viewBox="0 0 24 24">
-            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
-            <path d="M0 0h24v24H0z" fill="none"></path>
-          </svg>
-          <svg id="menu_open" viewBox="0 0 24 24">
-            <path d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
-          </svg>
-        </div>
-        <div class="title">flatpickr - <a class="no-barba" href="https://tr.you84815.space/">にほんご。</a></div>
-      </header>
-      <div class="navi" id="navi">
-        <ul class="menu">
-          <li><a class="index" href="./index.html">Home</a></li>
-          <li><a class="introduction" href="./introduction.html">Introduction</a></li>
-          <li><a class="gettingStarted" href="./gettingStarted.html">Getting Started</a>
-            <ul class="hidden" id="navi_gettingStarted">
-              <li><a href="./gettingStarted.html#installation">Installation</a></li>
-              <li><a href="./gettingStarted.html#usage">Usage</a></li>
-            </ul>
-          </li>
-          <li><a class="examples" href="./examples.html">Examples</a>
-            <ul class="hidden" id="navi_examples">
-              <li><a href="./examples.html#basic">基本</a></li>
-              <li><a href="./examples.html#date-time">時間指定</a></li>
-              <li><a href="./examples.html#human-friendly-dates">表示用日付の指定</a></li>
-              <li><a href="./examples.html#supplying-dates-for-flatpickr">日付形式指定</a></li>
-              <li><a href="./examples.html#preloading-a-date">日付の初期値設定</a></li>
-              <li><a href="./examples.html#mindate-and-maxdate">minDate、maxDate</a></li>
-              <li><a href="./examples.html#disabling-dates">特定の日付を無効化</a></li>
-              <li><a href="./examples.html#disabling-all-dates-except-select-few">特定日付以外を無効化</a></li>
-              <li><a href="./examples.html#selecting-multiple-dates">日付の複数選択</a></li>
-              <li><a href="./examples.html#range-calendar">日付の期間選択</a></li>
-              <li><a href="./examples.html#time-picker">時間選択</a></li>
-              <li><a href="./examples.html#datetimepicker-with-limited-time-range">時間の範囲制限</a></li>
-              <li><a href="./examples.html#inline-calendar">インライン表示</a></li>
-              <li><a href="./examples.html#display-week-numbers">週番号表示</a></li>
-              <li><a href="./examples.html#flatpickr-external-elements">flatpickr + 外部要素</a></li>
-            </ul>
-          </li>
-          <li><a class="theFlatpickrInstance" href="./theFlatpickrInstance.html">The Flatpickr Instance</a>
-            <ul class="hidden" id="navi_theFlatpickrInstance">
-              <li><a href="./theFlatpickrInstance.html#retrieving-the-flatpickr-instance">インスタンス生成</a></li>
-              <li><a href="./theFlatpickrInstance.html#properties">プロパティ</a></li>
-              <li><a href="./theFlatpickrInstance.html#methods">メソッド</a></li>
-              <li><a href="./theFlatpickrInstance.html#elements">要素</a></li>
-              <li><a href="./theFlatpickrInstance.html#useful-prototype-methods">便利なプロトタイプメソッド</a></li>
-            </ul>
-          </li>
-          <li><a class="eventsAndHooks active" href="./eventsAndHooks.html">Events & Hooks</a>
-            <ul id="navi_eventsAndHooks">
-              <li><a href="./eventsAndHooks.html#events">イベント</a></li>
-              <li><a href="./eventsAndHooks.html#hooks">フック</a></li>
-            </ul>
-          </li>
-          <li><a class="configOptions" href="./configOptions.html">Options</a></li>
-          <li><a class="formattingTokens" href="./formattingTokens.html">Formatting Tokens</a>
-            <ul class="hidden" id="navi_formattingTokens">
-              <li><a href="./formattingTokens.html#date-formatting-tokens">日付フォーマット</a></li>
-              <li><a href="./formattingTokens.html#time-formatting-tokenshooks">時刻フォーマット</a></li>
-              <li><a href="./formattingTokens.html#escaping-formatting-tokens">エスケープ</a></li>
-            </ul>
-          </li>
-          <li><a class="localization" href="./localization.html">Localization</a>
-            <ul class="hidden" id="navi_localization">
-              <li><a href="./localization.html#using-modules">モジュール環境</a></li>
-              <li><a href="./localization.html#localization-in-a-browser-environment">非モジュール環境</a></li>
-            </ul>
-          </li>
-          <li><a class="plugins" href="./plugins.html">Plugins</a>
-            <ul class="hidden" id="navi_plugins">
-              <li><a href="./plugins.html#confirmDate">confirmDate</a></li>
-              <li><a href="./plugins.html#weekSelect">weekSelect</a></li>
-            </ul>
-          </li>
-          <li><a class="themes" href="./themes.html">Themes</a>
-            <ul class="hidden" id="navi_themes">
-              <li><a href="./themes.html#usage">使い方</a></li>
-              <li><a href="./themes.html#available-themes">利用可能なテーマ</a></li>
-            </ul>
-          </li>
-          <li><a class="mobileSupport" href="./mobileSupport.html">Mobile Support</a>
-            <ul class="hidden" id="navi_mobileSupport">
-              <li><a href="./mobileSupport.html#native-datetime-input">ネイティブの日付入力について</a></li>
-            </ul>
-          </li>
-          <li><a class="usageInIE9" href="./usageInIE9.html">Usage in IE9</a></li>
-          <li><a class="updatingFromFlatpickrV2" href="./updatingFromFlatpickrV2.html">Updating from v2</a>
-            <ul class="hidden" id="navi_updatingFromFlatpickrV2">
-              <li><a href="./updatingFromFlatpickrV2.html#deprecation-of-the-utc-option">utcオプションを非推奨化</a></li>
-              <li><a href="./updatingFromFlatpickrV2.html#simplified-invocation">呼び出しの簡素化</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div id="content">
-        <div id="main">
-          <div id="barba-wrapper">
-            <div class="barba-container">
-              <h1>Events &amp; Hooks</h1>
-              <div id="update_date"><span>更新日: 2018.05.31
-</span>
-              </div>
-              <h2 id="events">イベント</h2>
-              <p>
-                flatpickrには一般的で便利な5つのイベントフックがあります。
-                各イベントフックには関数または、関数配列を指定することができます。
-                コールバックについては以下の通りです。
-              </p>
-              <p><code>selectedDates</code>は選択した日付のDate Objです。日付選択していない場合は空です。</p>
-              <p><code>dateStr</code>は選択した日付の日付文字列です。
-                <code>dateFormat</code>オプションでフォーマットされた値が格納されます。
-              </p>
-              <p><code>instance</code>はflatpickrオブジェクトです。flatpickrの関数やプロパティを持っています。</p>
-              <h2 id="hooks">フック</h2>
-              <h3 id="onchange">onChange</h3>
-              <p><code>onChange</code>は日付を選択したり、日時を変更した時に発火します。</p><br>
-              <h3 id="onopen">onOpen</h3>
-              <p><code>onOpen</code>はカレンダーを開いた時に発火します。</p><br>
-              <h3 id="onclose">onClose</h3>
-              <p><code>onClose</code>はカレンダーを閉じた時に発火します。</p><br>
-              <h3 id="onmonthchange">onMonthChange</h3>
-              <p><code>onMonthChange</code>は「月」を変更した場合に発火します。スクリプトで「月」を変更した場合も発火します。</p><br>
-              <h3 id="onyearchange">onYearChange</h3>
-              <p><code>onYearChange</code>は「年」を変更した場合に発火します。スクリプトで「年」を変更した場合も発火します。</p>
-              <pre><code class="js">{
-  onChange: function(selectedDates, dateStr, instance) {
-    //...
+<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><title>Events &amp; Hooks | flatpickr - にほんご。</title><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta property="og:title" content="Events &amp; Hooks | flatpickr - にほんご。"><meta property="og:url"><meta property="og:type" content="article"><link rel="icon" href="https://tr.you84815.space/flatpickr/favicon.ico"><link rel="stylesheet" href="./css/main.css"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-106478577-1', 'auto');</script></head><body><div id="container"><header><div class="icon"><a class="no-barba" href="https://tr.you84815.space/"><svg width="16" height="16"><rect width="16" height="16" fill="#e0e0e0"></rect></svg></a></div><div class="navi_toggle" onclick="toggleMenu()"><svg id="menu_close" width="24" height="24" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><svg id="menu_open" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></div><div class="title">flatpickr - <a class="no-barba" href="https://tr.you84815.space/">にほんご。</a></div></header><div class="navi" id="navi"><ul class="menu"><li><a class="index" href="./index.html">Home</a></li><li><a class="introduction" href="./introduction.html">Introduction</a></li><li><a class="gettingStarted" href="./gettingStarted.html">Getting Started</a><ul class="hidden" id="navi_gettingStarted"><li><a href="./gettingStarted.html#installation">Installation</a></li><li><a href="./gettingStarted.html#usage">Usage</a></li></ul></li><li><a class="examples" href="./examples.html">Examples</a><ul class="hidden" id="navi_examples"><li><a href="./examples.html#basic">基本</a></li><li><a href="./examples.html#date-time">時間指定</a></li><li><a href="./examples.html#human-friendly-dates">表示用日付の指定</a></li><li><a href="./examples.html#supplying-dates-for-flatpickr">日付形式指定</a></li><li><a href="./examples.html#preloading-a-date">日付の初期値設定</a></li><li><a href="./examples.html#mindate-and-maxdate">minDate、maxDate</a></li><li><a href="./examples.html#disabling-dates">特定の日付を無効化</a></li><li><a href="./examples.html#disabling-all-dates-except-select-few">特定日付以外を無効化</a></li><li><a href="./examples.html#selecting-multiple-dates">日付の複数選択</a></li><li><a href="./examples.html#range-calendar">日付の期間選択</a></li><li><a href="./examples.html#time-picker">時間選択</a></li><li><a href="./examples.html#datetimepicker-with-limited-time-range">時間の範囲制限</a></li><li><a href="./examples.html#inline-calendar">インライン表示</a></li><li><a href="./examples.html#display-week-numbers">週番号表示</a></li><li><a href="./examples.html#flatpickr-external-elements">flatpickr + 外部要素</a></li></ul></li><li><a class="theFlatpickrInstance" href="./theFlatpickrInstance.html">The Flatpickr Instance</a><ul class="hidden" id="navi_theFlatpickrInstance"><li><a href="./theFlatpickrInstance.html#retrieving-the-flatpickr-instance">インスタンス生成</a></li><li><a href="./theFlatpickrInstance.html#properties">プロパティ</a></li><li><a href="./theFlatpickrInstance.html#methods">メソッド</a></li><li><a href="./theFlatpickrInstance.html#elements">要素</a></li><li><a href="./theFlatpickrInstance.html#useful-prototype-methods">便利なプロトタイプメソッド</a></li></ul></li><li><a class="eventsAndHooks active" href="./eventsAndHooks.html">Events & Hooks</a><ul id="navi_eventsAndHooks"><li><a href="./eventsAndHooks.html#events">イベント</a></li><li><a href="./eventsAndHooks.html#hooks">フック</a></li></ul></li><li><a class="configOptions" href="./configOptions.html">Options</a></li><li><a class="formattingTokens" href="./formattingTokens.html">Formatting Tokens</a><ul class="hidden" id="navi_formattingTokens"><li><a href="./formattingTokens.html#date-formatting-tokens">日付フォーマット</a></li><li><a href="./formattingTokens.html#time-formatting-tokenshooks">時刻フォーマット</a></li><li><a href="./formattingTokens.html#escaping-formatting-tokens">エスケープ</a></li></ul></li><li><a class="localization" href="./localization.html">Localization</a><ul class="hidden" id="navi_localization"><li><a href="./localization.html#using-modules">モジュール環境</a></li><li><a href="./localization.html#localization-in-a-browser-environment">非モジュール環境</a></li></ul></li><li><a class="plugins" href="./plugins.html">Plugins</a><ul class="hidden" id="navi_plugins"><li><a href="./plugins.html#confirmDate">confirmDate</a></li><li><a href="./plugins.html#weekSelect">weekSelect</a></li></ul></li><li><a class="themes" href="./themes.html">Themes</a><ul class="hidden" id="navi_themes"><li><a href="./themes.html#usage">使い方</a></li><li><a href="./themes.html#available-themes">利用可能なテーマ</a></li></ul></li><li><a class="mobileSupport" href="./mobileSupport.html">Mobile Support</a><ul class="hidden" id="navi_mobileSupport"><li><a href="./mobileSupport.html#native-datetime-input">ネイティブの日付入力について</a></li></ul></li><li><a class="usageInIE9" href="./usageInIE9.html">Usage in IE9</a></li><li><a class="updatingFromFlatpickrV2" href="./updatingFromFlatpickrV2.html">Updating from v2</a><ul class="hidden" id="navi_updatingFromFlatpickrV2"><li><a href="./updatingFromFlatpickrV2.html#deprecation-of-the-utc-option">utcオプションを非推奨化</a></li><li><a href="./updatingFromFlatpickrV2.html#simplified-invocation">呼び出しの簡素化</a></li></ul></li></ul></div><div id="content"><div id="main"><div id="barba-wrapper"><div class="barba-container"><h1>Events &amp; Hooks</h1><div id="update_date"><span>更新日: 2018.09.04
+</span></div><h2 id="events">イベント</h2><p>flatpickrには一般的で便利な5つのイベントフックがあります。
+各イベントフックには関数または、関数配列を指定することができます。
+コールバックについては以下の通りです。</p><p><code>selectedDates</code>は選択した日付のDate Objです。日付選択していない場合は空です。</p><p><code>dateStr</code>は選択した日付の日付文字列です。
+<code>dateFormat</code>オプションでフォーマットされた値が格納されます。</p><p><code>instance</code>はflatpickrオブジェクトです。flatpickrの関数やプロパティを持っています。</p><h2 id="hooks">フック</h2><h3 id="onchange">onChange</h3><p><code>onChange</code>は日付を選択したり、日時を変更した時に発火します。</p><br><h3 id="onopen">onOpen</h3><p><code>onOpen</code>はカレンダーを開いた時に発火します。</p><br><h3 id="onclose">onClose</h3><p><code>onClose</code>はカレンダーを閉じた時に発火します。</p><br><h3 id="onmonthchange">onMonthChange</h3><p><code>onMonthChange</code>は「月」を変更した場合に発火します。スクリプトで「月」を変更した場合も発火します。</p><br><h3 id="onyearchange">onYearChange</h3><p><code>onYearChange</code>は「年」を変更した場合に発火します。スクリプトで「年」を変更した場合も発火します。</p><pre><code>{
+  <span class="hljs-attr">onChange</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">selectedDates, dateStr, instance</span>) </span>{
+    <span class="hljs-comment">//...</span>
   },
-  onOpen: [
-    function(selectedDates, dateStr, instance){
-      //...
+  <span class="hljs-attr">onOpen</span>: [
+    <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">selectedDates, dateStr, instance</span>)</span>{
+      <span class="hljs-comment">//...</span>
     },
-    function(selectedDates, dateStr, instance){
-      //...
+    <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">selectedDates, dateStr, instance</span>)</span>{
+      <span class="hljs-comment">//...</span>
     }
   ],
-  onClose: function(selectedDates, dateStr, instance){
-    // ...
+  <span class="hljs-attr">onClose</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">selectedDates, dateStr, instance</span>)</span>{
+    <span class="hljs-comment">// ...</span>
   }
-}</code></pre><br>
-              <h3 id="onready">onReady</h3>
-              <p><code>onReady</code>はカレンダーが準備完了になった時点で発火します。</p><br>
-              <h3 id="onvalueupdate">onValueUpdate</h3>
-              <p><code>onValueUpdate</code>は日付が新しい値に更新された時点で発火します。</p>
-              <h4>デモ</h4>
-              <p>各種イベントを発火させた際に、その内容を表示します。</p>
-              <h5>JavaScript</h5>
-              <pre><code class="js">const config = {
-  inline: true,
-  onChange: function(selectedDates, dateStr, instance) {
-    document.getElementById('eventHookDisp').innerHTML = 'onChange作動';
+}</code></pre><br><h3 id="onready">onReady</h3><p><code>onReady</code>はカレンダーが準備完了になった時点で発火します。</p><br><h3 id="onvalueupdate">onValueUpdate</h3><p><code>onValueUpdate</code>は日付が新しい値に更新された時点で発火します。</p><h4>デモ</h4><p>各種イベントを発火させた際に、その内容を表示します。</p><h5>JavaScript</h5><pre><code><span class="hljs-keyword">const</span> config = {
+  <span class="hljs-attr">inline</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">onChange</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">selectedDates, dateStr, instance</span>) </span>{
+    <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'eventHookDisp'</span>).innerHTML = <span class="hljs-string">'onChange作動'</span>;
   },
-  onMonthChange: function(selectedDates, dateStr, instance) {
-    document.getElementById('eventHookDisp').innerHTML = 'onMonthChange作動';
+  <span class="hljs-attr">onMonthChange</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">selectedDates, dateStr, instance</span>) </span>{
+    <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'eventHookDisp'</span>).innerHTML = <span class="hljs-string">'onMonthChange作動'</span>;
   },
-  onYearChange: function(selectedDates, dateStr, instance) {
-    document.getElementById('eventHookDisp').innerHTML = 'onYearChange作動';
+  <span class="hljs-attr">onYearChange</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">selectedDates, dateStr, instance</span>) </span>{
+    <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'eventHookDisp'</span>).innerHTML = <span class="hljs-string">'onYearChange作動'</span>;
   },
-  onValueUpdate: function(selectedDates, dateStr, instance) {
-    document.getElementById('eventHookDisp').innerHTML = 'onValueUpdate作動';
+  <span class="hljs-attr">onValueUpdate</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">selectedDates, dateStr, instance</span>) </span>{
+    <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'eventHookDisp'</span>).innerHTML = <span class="hljs-string">'onValueUpdate作動'</span>;
   },
 }
-let fp = flatpickr('.flatpickr', config);</code></pre>
-              <h5>HTML</h5>
-              <pre><code class="html">&#x3C;input class=&#x22;flatpickr&#x22; type=&#x22;text&#x22; placeholder=&#x22;Select Date..&#x22; readonly=&#x22;readonly&#x22;&#x3E;&#x3C;br&#x3E;
-&#x3C;span id=&#x22;eventHookDisp&#x22;&#x3E;[ここにイベントが表示されます]&#x3C;/span&#x3E;&#x3C;br&#x3E;</code></pre><br>
-              <input class="fp_event" type="text" placeholder="Select Date.." readonly="readonly"><span id="eventHookDisp">[ここにイベントが表示されます]</span><br><br>
-              <h3 id="ondaycreate">onDayCreate</h3>
-              <p><code>onDayCreate</code>はカレンダーのすべての日付セルをフルコントロールします。</p>
-              <h4>デモ</h4>
-              <p>カレンダーの日付に対してマーカーを付与します。付与する日付はランダムです。</p>
-              <p>全ての「日」には<code>position: relative;</code>が指定されているのでマーカーの配置も簡単です。</p>
-              <h5>JavaScript</h5>
-              <pre><code class="js">const config = {
-  onDayCreate: function(dObj, dStr, fp, dayElem){
-    // 対応する日付のdayElem.dateObjを使用します。
+<span class="hljs-keyword">let</span> fp = flatpickr(<span class="hljs-string">'.flatpickr'</span>, config);</code></pre><h5>HTML</h5><pre><code><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"eventHookDisp"</span>&gt;</span>[ここにイベントが表示されます]<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></code></pre><br><input class="fp_event" type="text" placeholder="Select Date.." readonly="readonly"><span id="eventHookDisp">[ここにイベントが表示されます]</span><br><br><h3 id="ondaycreate">onDayCreate</h3><p><code>onDayCreate</code>はカレンダーのすべての日付セルをフルコントロールします。</p><h4>デモ</h4><p>カレンダーの日付に対してマーカーを付与します。付与する日付はランダムです。</p><p>全ての「日」には<code>position: relative;</code>が指定されているのでマーカーの配置も簡単です。</p><h5>JavaScript</h5><pre><code><span class="hljs-keyword">const</span> config = {
+  <span class="hljs-attr">onDayCreate</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">dObj, dStr, fp, dayElem</span>)</span>{
+    <span class="hljs-comment">// 対応する日付のdayElem.dateObjを使用します。</span>
  
-    // dummy logic
-    if (Math.random() < 0.15)
-      dayElem.innerHTML += &#x22;&#x3C;span class=&#x27;event&#x27;&#x3E;&#x3C;/span&#x3E;&#x22;;
+    <span class="hljs-comment">// dummy logic</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">Math</span>.random() &lt; <span class="hljs-number">0.15</span>)
+      dayElem.innerHTML += <span class="hljs-string">"&lt;span class='event'&gt;&lt;/span&gt;"</span>;
  
-    else if (Math.random() > 0.85)
-      dayElem.innerHTML += &#x22;&#x3C;span class=&#x27;event busy&#x27;&#x3E;&#x3C;/span&#x3E;&#x22;;
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-built_in">Math</span>.random() &gt; <span class="hljs-number">0.85</span>)
+      dayElem.innerHTML += <span class="hljs-string">"&lt;span class='event busy'&gt;&lt;/span&gt;"</span>;
   }
 }
-let fp = flatpickr('.flatpickr', config);</code></pre>
-              <h5>CSS</h5>
-              <pre><code class="css">.event {
-  position: absolute;
-  width: 3px;
-  height: 3px;
-  border-radius: 150px;
-  bottom: 3px;
-  left: calc(50% - 1.5px);
-  content: " ";
-  display: block;
-  background: #3d8eb9;
+<span class="hljs-keyword">let</span> fp = flatpickr(<span class="hljs-string">'.flatpickr'</span>, config);</code></pre><h5>CSS</h5><pre><code><span class="hljs-selector-class">.event</span> {
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">3px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">3px</span>;
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">150px</span>;
+  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">3px</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-built_in">calc</span>(50% - 1.5px);
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">" "</span>;
+  <span class="hljs-attribute">display</span>: block;
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#3d8eb9</span>;
 }
- 
+
+<span class="hljs-selector-class">.event</span><span class="hljs-selector-class">.busy</span> {
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#f64747</span>;
+}</code></pre><h5>HTML</h5><pre><code><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span></code></pre><input class="fp_mark" type="text" placeholder="Select Date.." readonly="readonly"><br><br><script class="load">createObj = function() {
+  flatpickr(".flatpickr");
+
+  const examples = document.querySelectorAll(".flatpickr");
+  let config = {
+    inline: true,
+    onChange: function(selectedDates, dateStr, instance) {
+      document.getElementById('eventHookDisp').innerHTML = 'onChange作動';
+    },
+    onMonthChange: function(selectedDates, dateStr, instance) {
+      document.getElementById('eventHookDisp').innerHTML = 'onMonthChange作動';
+    },
+    onYearChange: function(selectedDates, dateStr, instance) {
+      document.getElementById('eventHookDisp').innerHTML = 'onYearChange作動';
+    },
+    onValueUpdate: function(selectedDates, dateStr, instance) {
+      document.getElementById('eventHookDisp').innerHTML = 'onValueUpdate作動';
+    },
+  }
+  let fp_event = flatpickr('.fp_event', config);
+
+  config = {
+    onDayCreate: function(dObj, dStr, fp, dayElem){
+        // Utilize dayElem.dateObj, which is the corresponding Date
+
+        // dummy logic
+        if (Math.random() < 0.15)
+            dayElem.innerHTML += "<span class='event'></span>";
+
+        else if (Math.random() > 0.85)
+            dayElem.innerHTML += "<span class='event busy'></span>";
+    }
+  }
+  let fp_mark = flatpickr('.fp_mark', config);
+};
+</script><style>.event {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 150px;
+    bottom: 3px;
+    left: calc(50% - 1.5px);
+    content: " ";
+    display: block;
+    background: #3d8eb9;
+}
+
 .event.busy {
-  background: #f64747;
-}</code></pre>
-              <h5>HTML</h5>
-              <pre><code class="html">&#x3C;input class=&#x22;flatpickr&#x22; type=&#x22;text&#x22; placeholder=&#x22;Select Date..&#x22; readonly=&#x22;readonly&#x22;&#x3E;&#x3C;br&#x3E;</code></pre>
-              <input class="fp_mark" type="text" placeholder="Select Date.." readonly="readonly"><br><br>
-              <script class="load">
-                createObj = function() {
-                  flatpickr(".flatpickr");
-                
-                  const examples = document.querySelectorAll(".flatpickr");
-                  let config = {
-                    inline: true,
-                    onChange: function(selectedDates, dateStr, instance) {
-                      document.getElementById('eventHookDisp').innerHTML = 'onChange作動';
-                    },
-                    onMonthChange: function(selectedDates, dateStr, instance) {
-                      document.getElementById('eventHookDisp').innerHTML = 'onMonthChange作動';
-                    },
-                    onYearChange: function(selectedDates, dateStr, instance) {
-                      document.getElementById('eventHookDisp').innerHTML = 'onYearChange作動';
-                    },
-                    onValueUpdate: function(selectedDates, dateStr, instance) {
-                      document.getElementById('eventHookDisp').innerHTML = 'onValueUpdate作動';
-                    },
-                  }
-                  let fp_event = flatpickr('.fp_event', config);
-                
-                  config = {
-                    onDayCreate: function(dObj, dStr, fp, dayElem){
-                        // Utilize dayElem.dateObj, which is the corresponding Date
-                
-                        // dummy logic
-                        if (Math.random() < 0.15)
-                            dayElem.innerHTML += "<span class='event'></span>";
-                
-                        else if (Math.random() > 0.85)
-                            dayElem.innerHTML += "<span class='event busy'></span>";
-                    }
-                  }
-                  let fp_mark = flatpickr('.fp_mark', config);
-                };
-                
-              </script>
-              <style>
-                .event {
-                    position: absolute;
-                    width: 3px;
-                    height: 3px;
-                    border-radius: 150px;
-                    bottom: 3px;
-                    left: calc(50% - 1.5px);
-                    content: " ";
-                    display: block;
-                    background: #3d8eb9;
-                }
-                
-                .event.busy {
-                    background: #f64747;
-                }
-              </style><br>
-              <div class="license">
-                <p>
-                  &copy; 2017
-                   Gregory Petrosyan Released under the <a href="https://github.com/chmln/flatpickr/blob/master/LICENSE.md">MIT license</a>
-                </p>
-                <p>このコンテンツはGregory Petrosyan(chmln)による<a href="https://chmln.github.io/flatpickr/">flatpickrドキュメント</a>を翻訳/改変したものです。</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <footer><span>
-           &copy; <span id="copy_year">2017</span> tobijibu</span></footer>
-    </div>
-    <noscript id="deferred-styles">
-      <link href="./css/lazy.css" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/confirmDate/confirmDate.min.css">
-    </noscript>
-    <script>
-      var loadDeferredStyles = function() {
-        var addStylesNode = document.getElementById("deferred-styles");
-        var replacement = document.createElement("div");
-        replacement.innerHTML = addStylesNode.textContent;
-        document.body.appendChild(replacement)
-        addStylesNode.parentElement.removeChild(addStylesNode);
-      };
-      var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-          window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
-      else window.addEventListener('load', loadDeferredStyles);
-      
-    </script>
-    <script src="./js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/confirmDate/confirmDate.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/weekSelect/weekSelect.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/rangePlugin.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/minMaxTimePlugin.min.js"></script>
-    <div id="src" hidden></div>
-  </body>
-</html>
+    background: #f64747;
+}</style><br><div class="license"><p>&copy; 2017
+ Gregory Petrosyan Released under the <a href="https://github.com/chmln/flatpickr/blob/master/LICENSE.md">MIT license</a></p><p>このコンテンツはGregory Petrosyan(chmln)による<a href="https://chmln.github.io/flatpickr/">flatpickrドキュメント</a>を翻訳/改変したものです。</p></div></div></div></div></div><footer><span> &copy; <span id="copy_year">2017</span> tobijibu</span></footer></div><noscript id="deferred-styles"><link href="./css/lazy.css" rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/confirmDate/confirmDate.min.css"></noscript><script src="./js/main.js" defer></script><script src="https://cdn.jsdelivr.net/npm/flatpickr"></script><script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.min.js"></script><script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/confirmDate/confirmDate.min.js"></script><script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/weekSelect/weekSelect.min.js"></script><script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/rangePlugin.min.js"></script><script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/minMaxTimePlugin.min.js"></script><div id="src" hidden></div></body></html>
