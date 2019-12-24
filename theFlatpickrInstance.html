@@ -1,122 +1,409 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><title>The Flatpickr Instance | flatpickr - にほんご。</title><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta property="og:title" content="The Flatpickr Instance | flatpickr - にほんご。"><meta property="og:url"><meta property="og:type" content="article"><link rel="icon" href="https://tr.you84815.space/flatpickr/favicon.ico"><link rel="stylesheet" href="./css/main.css"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-106478577-1', 'auto');</script></head><body><div id="container"><header><div class="icon"><a class="no-barba" href="https://tr.you84815.space/"><svg width="16" height="16"><rect width="16" height="16" fill="#e0e0e0"></rect></svg></a></div><div class="navi_toggle" onclick="toggleMenu()"><svg id="menu_close" width="24" height="24" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><svg id="menu_open" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></div><div class="title">flatpickr - <a class="no-barba" href="https://tr.you84815.space/">にほんご。</a></div></header><div class="navi" id="navi"><ul class="menu"><li><a class="index" href="./index.html">Home</a></li><li><a class="introduction" href="./introduction.html">Introduction</a></li><li><a class="gettingStarted" href="./gettingStarted.html">Getting Started</a><ul class="hidden" id="navi_gettingStarted"><li><a href="./gettingStarted.html#installation">Installation</a></li><li><a href="./gettingStarted.html#usage">Usage</a></li></ul></li><li><a class="examples" href="./examples.html">Examples</a><ul class="hidden" id="navi_examples"><li><a href="./examples.html#basic">基本</a></li><li><a href="./examples.html#date-time">時間指定</a></li><li><a href="./examples.html#human-friendly-dates">表示用日付の指定</a></li><li><a href="./examples.html#supplying-dates-for-flatpickr">日付形式指定</a></li><li><a href="./examples.html#preloading-a-date">日付の初期値設定</a></li><li><a href="./examples.html#mindate-and-maxdate">minDate、maxDate</a></li><li><a href="./examples.html#disabling-dates">特定の日付を無効化</a></li><li><a href="./examples.html#disabling-all-dates-except-select-few">特定日付以外を無効化</a></li><li><a href="./examples.html#selecting-multiple-dates">日付の複数選択</a></li><li><a href="./examples.html#range-calendar">日付の期間選択</a></li><li><a href="./examples.html#time-picker">時間選択</a></li><li><a href="./examples.html#datetimepicker-with-limited-time-range">時間の範囲制限</a></li><li><a href="./examples.html#inline-calendar">インライン表示</a></li><li><a href="./examples.html#display-week-numbers">週番号表示</a></li><li><a href="./examples.html#flatpickr-external-elements">flatpickr + 外部要素</a></li></ul></li><li><a class="theFlatpickrInstance active" href="./theFlatpickrInstance.html">The Flatpickr Instance</a><ul id="navi_theFlatpickrInstance"><li><a href="./theFlatpickrInstance.html#retrieving-the-flatpickr-instance">インスタンス生成</a></li><li><a href="./theFlatpickrInstance.html#properties">プロパティ</a></li><li><a href="./theFlatpickrInstance.html#methods">メソッド</a></li><li><a href="./theFlatpickrInstance.html#elements">要素</a></li><li><a href="./theFlatpickrInstance.html#useful-prototype-methods">便利なプロトタイプメソッド</a></li></ul></li><li><a class="eventsAndHooks" href="./eventsAndHooks.html">Events & Hooks</a><ul class="hidden" id="navi_eventsAndHooks"><li><a href="./eventsAndHooks.html#events">イベント</a></li><li><a href="./eventsAndHooks.html#hooks">フック</a></li></ul></li><li><a class="configOptions" href="./configOptions.html">Options</a></li><li><a class="formattingTokens" href="./formattingTokens.html">Formatting Tokens</a><ul class="hidden" id="navi_formattingTokens"><li><a href="./formattingTokens.html#date-formatting-tokens">日付フォーマット</a></li><li><a href="./formattingTokens.html#time-formatting-tokenshooks">時刻フォーマット</a></li><li><a href="./formattingTokens.html#escaping-formatting-tokens">エスケープ</a></li></ul></li><li><a class="localization" href="./localization.html">Localization</a><ul class="hidden" id="navi_localization"><li><a href="./localization.html#using-modules">モジュール環境</a></li><li><a href="./localization.html#localization-in-a-browser-environment">非モジュール環境</a></li></ul></li><li><a class="plugins" href="./plugins.html">Plugins</a><ul class="hidden" id="navi_plugins"><li><a href="./plugins.html#confirmDate">confirmDate</a></li><li><a href="./plugins.html#weekSelect">weekSelect</a></li><li><a href="./plugins.html#rangePlugin">rangePlugin(β)</a></li><li><a href="./plugins.html#minMaxTimePlugin">MinMaxTimePlugin(β)</a></li><li><a href="./plugins.html#monthSelectPlugin">monthSelectPlugin</a></li></ul></li><li><a class="themes" href="./themes.html">Themes</a><ul class="hidden" id="navi_themes"><li><a href="./themes.html#usage">使い方</a></li><li><a href="./themes.html#available-themes">利用可能なテーマ</a></li></ul></li><li><a class="mobileSupport" href="./mobileSupport.html">Mobile Support</a><ul class="hidden" id="navi_mobileSupport"><li><a href="./mobileSupport.html#native-datetime-input">ネイティブの日付入力について</a></li></ul></li><li><a class="usageInIE9" href="./usageInIE9.html">Usage in IE9</a></li><li><a class="updatingFromFlatpickrV2" href="./updatingFromFlatpickrV2.html">Updating from v2</a><ul class="hidden" id="navi_updatingFromFlatpickrV2"><li><a href="./updatingFromFlatpickrV2.html#deprecation-of-the-utc-option">utcオプションを非推奨化</a></li><li><a href="./updatingFromFlatpickrV2.html#simplified-invocation">呼び出しの簡素化</a></li></ul></li></ul></div><div id="content"><div id="main"><div id="barba-wrapper"><div class="barba-container"><h1>The Flatpickr Instance</h1><div id="update_date"><span>更新日: 2019.12.12
-</span></div><h2 id="retrieving-the-flatpickr-instance">インスタンス生成</h2><p><a class="no-barba" href="./gettingStarted.html#usage">呼び出し結果</a>をインスタンスとして変数に格納することができます。いくつかの例を以下に表記します。</p><h4>1.セレクタを使う方法</h4><pre><code><span class="hljs-keyword">const</span> fp = flatpickr(<span class="hljs-string">"#myID"</span>, {}); <span class="hljs-comment">// flatpickr</span>
-</code></pre><h4>2.Elementオブジェクトを渡す方法</h4><pre><code><span class="hljs-keyword">const</span> myInput = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">".myInput"</span>);
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Flatpickr Instance | flatpickr - にほんご。</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="The Flatpickr Instance | flatpickr - にほんご。">
+    <meta property="og:url">
+    <meta property="og:type" content="article">
+    <link rel="icon" href="https://tr.you84815.space/flatpickr/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link id="theme_style" rel="stylesheet" type="text/css" href="">
+    <script id="srcTheme" src="./js/toggleTheme.js" data-dir="flatpickr"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-106478577-1', 'auto');
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <div class="icon"><a class="no-barba" href="https://tr.you84815.space/">
+            <svg width="16" height="16">
+              <rect width="16" height="16" fill="#e0e0e0"></rect>
+            </svg></a></div>
+        <div class="navi_toggle" onclick="toggleMenu()">
+          <svg id="menu_close" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+            <path d="M0 0h24v24H0z" fill="none"></path>
+          </svg>
+          <svg id="menu_open" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+          </svg>
+        </div>
+        <div class="title">flatpickr - <a class="no-barba" href="https://tr.you84815.space/">にほんご。</a></div><span id="toggleTheme">
+          <svg role="img" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
+          </svg></span>
+      </header>
+      <div class="navi" id="navi">
+        <ul class="menu">
+          <li><a class="index" href="./index.html">Home</a></li>
+          <li><a class="introduction" href="./introduction.html">Introduction</a></li>
+          <li><a class="gettingStarted" href="./gettingStarted.html">Getting Started</a>
+            <ul class="hidden" id="navi_gettingStarted">
+              <li><a href="./gettingStarted.html#installation">Installation</a></li>
+              <li><a href="./gettingStarted.html#usage">Usage</a></li>
+            </ul>
+          </li>
+          <li><a class="examples" href="./examples.html">Examples</a>
+            <ul class="hidden" id="navi_examples">
+              <li><a href="./examples.html#basic">基本</a></li>
+              <li><a href="./examples.html#date-time">時間指定</a></li>
+              <li><a href="./examples.html#human-friendly-dates">表示用日付の指定</a></li>
+              <li><a href="./examples.html#supplying-dates-for-flatpickr">日付形式指定</a></li>
+              <li><a href="./examples.html#preloading-a-date">日付の初期値設定</a></li>
+              <li><a href="./examples.html#mindate-and-maxdate">minDate、maxDate</a></li>
+              <li><a href="./examples.html#disabling-dates">特定の日付を無効化</a></li>
+              <li><a href="./examples.html#disabling-all-dates-except-select-few">特定日付以外を無効化</a></li>
+              <li><a href="./examples.html#selecting-multiple-dates">日付の複数選択</a></li>
+              <li><a href="./examples.html#range-calendar">日付の期間選択</a></li>
+              <li><a href="./examples.html#time-picker">時間選択</a></li>
+              <li><a href="./examples.html#datetimepicker-with-limited-time-range">時間の範囲制限</a></li>
+              <li><a href="./examples.html#inline-calendar">インライン表示</a></li>
+              <li><a href="./examples.html#display-week-numbers">週番号表示</a></li>
+              <li><a href="./examples.html#flatpickr-external-elements">flatpickr + 外部要素</a></li>
+            </ul>
+          </li>
+          <li><a class="theFlatpickrInstance active" href="./theFlatpickrInstance.html">The Flatpickr Instance</a>
+            <ul id="navi_theFlatpickrInstance">
+              <li><a href="./theFlatpickrInstance.html#retrieving-the-flatpickr-instance">インスタンス生成</a></li>
+              <li><a href="./theFlatpickrInstance.html#properties">プロパティ</a></li>
+              <li><a href="./theFlatpickrInstance.html#methods">メソッド</a></li>
+              <li><a href="./theFlatpickrInstance.html#elements">要素</a></li>
+              <li><a href="./theFlatpickrInstance.html#useful-prototype-methods">便利なプロトタイプメソッド</a></li>
+            </ul>
+          </li>
+          <li><a class="eventsAndHooks" href="./eventsAndHooks.html">Events & Hooks</a>
+            <ul class="hidden" id="navi_eventsAndHooks">
+              <li><a href="./eventsAndHooks.html#events">イベント</a></li>
+              <li><a href="./eventsAndHooks.html#hooks">フック</a></li>
+            </ul>
+          </li>
+          <li><a class="configOptions" href="./configOptions.html">Options</a></li>
+          <li><a class="formattingTokens" href="./formattingTokens.html">Formatting Tokens</a>
+            <ul class="hidden" id="navi_formattingTokens">
+              <li><a href="./formattingTokens.html#date-formatting-tokens">日付フォーマット</a></li>
+              <li><a href="./formattingTokens.html#time-formatting-tokenshooks">時刻フォーマット</a></li>
+              <li><a href="./formattingTokens.html#escaping-formatting-tokens">エスケープ</a></li>
+            </ul>
+          </li>
+          <li><a class="localization" href="./localization.html">Localization</a>
+            <ul class="hidden" id="navi_localization">
+              <li><a href="./localization.html#using-modules">モジュール環境</a></li>
+              <li><a href="./localization.html#localization-in-a-browser-environment">非モジュール環境</a></li>
+            </ul>
+          </li>
+          <li><a class="plugins" href="./plugins.html">Plugins</a>
+            <ul class="hidden" id="navi_plugins">
+              <li><a href="./plugins.html#confirmDate">confirmDate</a></li>
+              <li><a href="./plugins.html#weekSelect">weekSelect</a></li>
+              <li><a href="./plugins.html#rangePlugin">rangePlugin(β)</a></li>
+              <li><a href="./plugins.html#minMaxTimePlugin">MinMaxTimePlugin(β)</a></li>
+              <li><a href="./plugins.html#monthSelectPlugin">monthSelectPlugin</a></li>
+            </ul>
+          </li>
+          <li><a class="themes" href="./themes.html">Themes</a>
+            <ul class="hidden" id="navi_themes">
+              <li><a href="./themes.html#usage">使い方</a></li>
+              <li><a href="./themes.html#available-themes">利用可能なテーマ</a></li>
+            </ul>
+          </li>
+          <li><a class="mobileSupport" href="./mobileSupport.html">Mobile Support</a>
+            <ul class="hidden" id="navi_mobileSupport">
+              <li><a href="./mobileSupport.html#native-datetime-input">ネイティブの日付入力について</a></li>
+            </ul>
+          </li>
+          <li><a class="usageInIE9" href="./usageInIE9.html">Usage in IE9</a></li>
+          <li><a class="updatingFromFlatpickrV2" href="./updatingFromFlatpickrV2.html">Updating from v2</a>
+            <ul class="hidden" id="navi_updatingFromFlatpickrV2">
+              <li><a href="./updatingFromFlatpickrV2.html#deprecation-of-the-utc-option">utcオプションを非推奨化</a></li>
+              <li><a href="./updatingFromFlatpickrV2.html#simplified-invocation">呼び出しの簡素化</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div id="content">
+        <div id="main">
+          <div id="barba-wrapper">
+            <div class="barba-container">
+              <h1>The Flatpickr Instance</h1>
+              <div id="update_date"><span>更新日: 2019.12.12
+</span>
+              </div>
+              <h2 id="retrieving-the-flatpickr-instance">インスタンス生成</h2>
+              <p><a class="no-barba" href="./gettingStarted.html#usage">呼び出し結果</a>をインスタンスとして変数に格納することができます。いくつかの例を以下に表記します。</p>
+              <h4>1.セレクタを使う方法</h4>
+              <pre><code><span class="hljs-keyword">const</span> fp = flatpickr(<span class="hljs-string">"#myID"</span>, {}); <span class="hljs-comment">// flatpickr</span>
+</code></pre>
+              <h4>2.Elementオブジェクトを渡す方法</h4>
+              <pre><code><span class="hljs-keyword">const</span> myInput = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">".myInput"</span>);
 <span class="hljs-keyword">const</span> fp = <span class="hljs-keyword">new</span> flatpickr(myInput, {});  <span class="hljs-comment">// flatpickr</span>
-</code></pre><h4>3.セレクタを使って生成し、要素番号でアクセス</h4><pre><code><span class="hljs-keyword">const</span> calendars = flatpickr(<span class="hljs-string">".calendar"</span>, {});
+</code></pre>
+              <h4>3.セレクタを使って生成し、要素番号でアクセス</h4>
+              <pre><code><span class="hljs-keyword">const</span> calendars = flatpickr(<span class="hljs-string">".calendar"</span>, {});
 calendars[<span class="hljs-number">0</span>] <span class="hljs-comment">// flatpickr</span>
-</code></pre><h4>4.変数に格納していない場合</h4><pre><code>flatpickr(<span class="hljs-string">"#myInput"</span>, {}); <span class="hljs-comment">// 変数に格納しない</span>
+</code></pre>
+              <h4>4.変数に格納していない場合</h4>
+              <pre><code>flatpickr(<span class="hljs-string">"#myInput"</span>, {}); <span class="hljs-comment">// 変数に格納しない</span>
 <span class="hljs-comment">// ...</span>
 
 <span class="hljs-keyword">const</span> fp = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">"#myInput"</span>)._flatpickr;
-</code></pre><h2 id="properties">プロパティ</h2><p>もしインスタンスを<code>fp</code>という変数に格納した場合、
-プロパティは<code>fp.currentYear</code>でアクセスできます。</p><h3>selectedDates</h3><p>選択した日付のオブジェクト(Dateオブジェクト)を取得します。</p><h4>デモ</h4><p><code>onChange</code>をトリガーとして<code>selectedDates</code>を表示します。</p><blockquote><code>onChange</code>は引数として<code>selectedDates</code>を受け取ることもできます。</blockquote><h5>JavaScript</h5><pre><code><span class="hljs-keyword">const</span> config = {
+</code></pre>
+              <h2 id="properties">プロパティ</h2>
+              <p>もしインスタンスを<code>fp</code>という変数に格納した場合、
+                プロパティは<code>fp.currentYear</code>でアクセスできます。
+              </p>
+              <h3>selectedDates</h3>
+              <p>選択した日付のオブジェクト(Dateオブジェクト)を取得します。</p>
+              <h4>デモ</h4>
+              <p><code>onChange</code>をトリガーとして<code>selectedDates</code>を表示します。</p>
+              <blockquote><code>onChange</code>は引数として<code>selectedDates</code>を受け取ることもできます。</blockquote>
+              <h5>JavaScript</h5>
+              <pre><code><span class="hljs-keyword">const</span> config = {
   <span class="hljs-attr">onChange</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
     <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'selectedDatesDisp'</span>).innerHTML = <span class="hljs-keyword">this</span>.selectedDates;
   }
 }
 <span class="hljs-keyword">let</span> fp = flatpickr(<span class="hljs-string">'.flatpickr'</span>, config);
-</code></pre><h5>HTML</h5><pre><code><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"selectedDatesDisp"</span>&gt;</span>[ここに選択した日付が表示されます]<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+</code></pre>
+              <h5>HTML</h5>
+              <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"selectedDatesDisp"</span>&gt;</span>[ここに選択した日付が表示されます]<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span></code></pre><span id="selectedDatesDisp">[ここに選択した日付が表示されます]</span><br><input class="flatpickr" type="text" placeholder="Select Date.." data-id="selectedDates" readonly="readonly"><br><h3>currentYear</h3><p>現在表示中のカレンダーの「年」を取得します。</p><h4>デモ</h4><p>日付を選択すると<code>onChange</code>をトリガーとして<code>currentYear</code>を表示します。</p><h5>JavaScript</h5><pre><code><span class="hljs-keyword">const</span> config = {
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span></code></pre><span id="selectedDatesDisp">[ここに選択した日付が表示されます]</span><br>
+              <input class="flatpickr" type="text" placeholder="Select Date.." data-id="selectedDates" readonly="readonly"><br>
+              <h3>currentYear</h3>
+              <p>現在表示中のカレンダーの「年」を取得します。</p>
+              <h4>デモ</h4>
+              <p>日付を選択すると<code>onChange</code>をトリガーとして<code>currentYear</code>を表示します。</p>
+              <h5>JavaScript</h5>
+              <pre><code><span class="hljs-keyword">const</span> config = {
   <span class="hljs-attr">onChange</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
     <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'dispCurrentYear'</span>).innerHTML = currentYear;
   }
 }
 <span class="hljs-keyword">let</span> fp = flatpickr(<span class="hljs-string">'.flatpickr'</span>, config);
-</code></pre><h5>HTML</h5><pre><code><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span>
+</code></pre>
+              <h5>HTML</h5>
+              <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"selectedDatesDisp"</span>&gt;</span>[ここに選択した日付が表示されます]<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></code></pre><input class="flatpickr" type="text" placeholder="Select Date.." data-id="dispCurrentYear" readonly="readonly"><br><span id="dispCurrentYear">[ここに選択した年が表示されます]</span><br><h3>currentMonth</h3><p>現在表示中のカレンダーの「月」(0～11)を取得します。</p><h4>デモ</h4><p>日付を選択すると<code>onChange</code>をトリガーとして<code>currentMonth</code>を表示します。</p><h5>JavaScript</h5><pre><code><span class="hljs-keyword">const</span> config = {
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"selectedDatesDisp"</span>&gt;</span>[ここに選択した日付が表示されます]<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></code></pre>
+              <input class="flatpickr" type="text" placeholder="Select Date.." data-id="dispCurrentYear" readonly="readonly"><br><span id="dispCurrentYear">[ここに選択した年が表示されます]</span><br>
+              <h3>currentMonth</h3>
+              <p>現在表示中のカレンダーの「月」(0～11)を取得します。</p>
+              <h4>デモ</h4>
+              <p>日付を選択すると<code>onChange</code>をトリガーとして<code>currentMonth</code>を表示します。</p>
+              <h5>JavaScript</h5>
+              <pre><code><span class="hljs-keyword">const</span> config = {
   <span class="hljs-attr">onChange</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
     <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'dispCurrentMonth'</span>).innerHTML = currentMonth;
   }
 }
-<span class="hljs-keyword">let</span> fp = flatpickr(<span class="hljs-string">'.flatpickr'</span>, config);</code></pre><h5>HTML</h5><pre><code><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"dispCurrentMonth"</span>&gt;</span>[ここに選択した月(0～11)が表示されます]<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-keyword">let</span> fp = flatpickr(<span class="hljs-string">'.flatpickr'</span>, config);</code></pre>
+              <h5>HTML</h5>
+              <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"dispCurrentMonth"</span>&gt;</span>[ここに選択した月(0～11)が表示されます]<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span></code></pre><span id="dispCurrentMonth">[ここに選択した月(0～11)が表示されます]</span><br><input class="flatpickr" type="text" placeholder="Select Date.." data-id="dispCurrentMonth" readonly="readonly"><br><h3>config</h3><p>設定オブジェクト(デフォルト + 個別に指定した設定)を取得します。</p><h4>デモ</h4><p>カレンダーを開くと<code>onOpen</code>をトリガーとして現在設定中の<code>config</code>を表示します。</p><h5>JavaScript</h5><pre><code><span class="hljs-keyword">const</span> config = {
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span></code></pre><span id="dispCurrentMonth">[ここに選択した月(0～11)が表示されます]</span><br>
+              <input class="flatpickr" type="text" placeholder="Select Date.." data-id="dispCurrentMonth" readonly="readonly"><br>
+              <h3>config</h3>
+              <p>設定オブジェクト(デフォルト + 個別に指定した設定)を取得します。</p>
+              <h4>デモ</h4>
+              <p>カレンダーを開くと<code>onOpen</code>をトリガーとして現在設定中の<code>config</code>を表示します。</p>
+              <h5>JavaScript</h5>
+              <pre><code><span class="hljs-keyword">const</span> config = {
   <span class="hljs-attr">onOpen</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
     <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'dispConfig'</span>).innerHTML = config;
   }
 }
-<span class="hljs-keyword">let</span> fp = flatpickr(<span class="hljs-string">'.flatpickr'</span>, config);</code></pre><h5>HTML</h5><pre><code><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"dispConfig"</span>&gt;</span>[ここに設定中のconfig Objが表示されます]<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-keyword">let</span> fp = flatpickr(<span class="hljs-string">'.flatpickr'</span>, config);</code></pre>
+              <h5>HTML</h5>
+              <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"dispConfig"</span>&gt;</span>[ここに設定中のconfig Objが表示されます]<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span></code></pre><span id="dispConfig">[ここに設定中のconfig Objが表示されます]</span><br><input class="flatpickr" type="text" placeholder="Select Date.." data-id="dispConfig" readonly="readonly"><br><h2 id="methods">メソッド</h2><h3>changeMonth(monthNum, is_offset = true)</h3><p>現在の月を変更します。</p><h5>JavaScript</h5><pre><code><span class="hljs-keyword">let</span> calendar = <span class="hljs-keyword">new</span> flatpickr(yourElement, config);
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span></code></pre><span id="dispConfig">[ここに設定中のconfig Objが表示されます]</span><br>
+              <input class="flatpickr" type="text" placeholder="Select Date.." data-id="dispConfig" readonly="readonly"><br>
+              <h2 id="methods">メソッド</h2>
+              <h3>changeMonth(monthNum, is_offset = true)</h3>
+              <p>現在の月を変更します。</p>
+              <h5>JavaScript</h5>
+              <pre><code><span class="hljs-keyword">let</span> calendar = <span class="hljs-keyword">new</span> flatpickr(yourElement, config);
 calendar.changeMonth(<span class="hljs-number">1</span>); <span class="hljs-comment">// 1月進める</span>
 calendar.changeMonth(<span class="hljs-number">-2</span>); <span class="hljs-comment">// 2月戻す</span>
 
-calendar.changeMonth(<span class="hljs-number">0</span>, <span class="hljs-literal">false</span>); <span class="hljs-comment">// 1月に設定する</span></code></pre><br><h3>clear()</h3><p>選択した日付をクリアします。</p><h4>デモ</h4><p>クリアボタンをクリックすると、選択された日付が空になります。</p><h5>JavaScript</h5><pre><code><span class="hljs-keyword">const</span> config = {
+calendar.changeMonth(<span class="hljs-number">0</span>, <span class="hljs-literal">false</span>); <span class="hljs-comment">// 1月に設定する</span></code></pre><br>
+              <h3>clear()</h3>
+              <p>選択した日付をクリアします。</p>
+              <h4>デモ</h4>
+              <p>クリアボタンをクリックすると、選択された日付が空になります。</p>
+              <h5>JavaScript</h5>
+              <pre><code><span class="hljs-keyword">const</span> config = {
   <span class="hljs-attr">defaultDate</span>: <span class="hljs-string">'today'</span>,
 }
 <span class="hljs-keyword">let</span> fp = flatpickr(<span class="hljs-string">'.flatpickr'</span>, config);
-<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'clearDate'</span>).addEventListener(<span class="hljs-string">'click'</span>, fp.clear, <span class="hljs-literal">false</span>);</code></pre><h5>HTML</h5><pre><code><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"clearDate"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"クリア"</span>&gt;</span></code></pre><input class="fp_cd" type="text" placeholder="Select Date.." readonly="readonly"><input type="button" id="clearDate" value="クリア"><br><h3>close()</h3><p>カレンダーを閉じます。</p><h4>デモ</h4><p>カレンダーを表示した状態で閉じるボックスをマウスオーバーすると、カレンダーが閉じます。</p><h5>JavaScript</h5><pre><code><span class="hljs-keyword">const</span> config = {
+<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'clearDate'</span>).addEventListener(<span class="hljs-string">'click'</span>, fp.clear, <span class="hljs-literal">false</span>);</code></pre>
+              <h5>HTML</h5>
+              <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"clearDate"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"クリア"</span>&gt;</span></code></pre>
+              <input class="fp_cd" type="text" placeholder="Select Date.." readonly="readonly">
+              <input type="button" id="clearDate" value="クリア"><br>
+              <h3>close()</h3>
+              <p>カレンダーを閉じます。</p>
+              <h4>デモ</h4>
+              <p>カレンダーを表示した状態で閉じるボックスをマウスオーバーすると、カレンダーが閉じます。</p>
+              <h5>JavaScript</h5>
+              <pre><code><span class="hljs-keyword">const</span> config = {
   <span class="hljs-attr">defaultDate</span>: <span class="hljs-string">'today'</span>,
 }
 <span class="hljs-keyword">let</span> fp = flatpickr(<span class="hljs-string">'.flatpickr'</span>, config);
 <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'closeCalendar'</span>).addEventListener(<span class="hljs-string">'mouseover'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   fp.close();
-}, <span class="hljs-literal">false</span>);</code></pre><h5>HTML</h5><pre><code><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"closeCalendar"</span>&gt;</span>閉じる<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></code></pre><input class="fp_cl" type="text" placeholder="Select Date.." readonly="readonly"><span id="closeCalendar">閉じる</span><br><h3>destroy()</h3><p>インスタンスを破棄します。イベントリスナーを削除したり、
-<code>input</code>タグを初期状態に戻すといった処理を行います。</p><h4>デモ</h4><p>破棄ボタンをクリックすると、flatpickrのインスタンスが破棄され、
-テキストボックスをクリックしてもカレンダーが表示されなくなります。</p><h5>JavaScript</h5><pre><code><span class="hljs-keyword">const</span> config = {
+}, <span class="hljs-literal">false</span>);</code></pre>
+              <h5>HTML</h5>
+              <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"closeCalendar"</span>&gt;</span>閉じる<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></code></pre>
+              <input class="fp_cl" type="text" placeholder="Select Date.." readonly="readonly"><span id="closeCalendar">閉じる</span><br>
+              <h3>destroy()</h3>
+              <p>
+                インスタンスを破棄します。イベントリスナーを削除したり、
+                <code>input</code>タグを初期状態に戻すといった処理を行います。
+              </p>
+              <h4>デモ</h4>
+              <p>
+                破棄ボタンをクリックすると、flatpickrのインスタンスが破棄され、
+                テキストボックスをクリックしてもカレンダーが表示されなくなります。
+              </p>
+              <h5>JavaScript</h5>
+              <pre><code><span class="hljs-keyword">const</span> config = {
   <span class="hljs-attr">defaultDate</span>: <span class="hljs-string">'today'</span>,
 }
 <span class="hljs-keyword">let</span> fp = flatpickr(<span class="hljs-string">'.flatpickr'</span>, config);
 <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'destroyFp'</span>).addEventListener(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   fp.destroy(fp);
-}, <span class="hljs-literal">false</span>);</code></pre><h5>HTML</h5><pre><code><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"destroyFp"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"破棄"</span>&gt;</span></code></pre><input class="fp_des" type="text" placeholder="Select Date.." readonly="readonly"><input type="button" id="destroyFp" value="破棄"><br><br><h3>formatDate(dateObj, formatStr)</h3><p>日付書式を指定します。<code>dateObj</code>はDateオブジェクトです。
-<code>formatStr</code>は日付フォーマットです。</p><p>戻り値：<code>formatStr</code>でフォーマットされた日付文字列が返ります。</p><h4>デモ</h4><p>変換ボタンをクリックすると、選択された日付を<code>d.m.Y</code>形式で変換し、表示します。</p><h5>JavaScript</h5><pre><code><span class="hljs-keyword">const</span> config = {
+}, <span class="hljs-literal">false</span>);</code></pre>
+              <h5>HTML</h5>
+              <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"destroyFp"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"破棄"</span>&gt;</span></code></pre>
+              <input class="fp_des" type="text" placeholder="Select Date.." readonly="readonly">
+              <input type="button" id="destroyFp" value="破棄"><br><br>
+              <h3>formatDate(dateObj, formatStr)</h3>
+              <p>日付書式を指定します。<code>dateObj</code>はDateオブジェクトです。
+                <code>formatStr</code>は日付フォーマットです。
+              </p>
+              <p>戻り値：<code>formatStr</code>でフォーマットされた日付文字列が返ります。</p>
+              <h4>デモ</h4>
+              <p>変換ボタンをクリックすると、選択された日付を<code>d.m.Y</code>形式で変換し、表示します。</p>
+              <h5>JavaScript</h5>
+              <pre><code><span class="hljs-keyword">const</span> config = {
   <span class="hljs-attr">defaultDate</span>: <span class="hljs-string">'today'</span>,
 }
 <span class="hljs-keyword">let</span> fp = flatpickr(<span class="hljs-string">'.flatpickr'</span>, config);
 <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'formatDate'</span>).addEventListener(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'formatDateDisp'</span>).innerHTML = fp.formatDate(fp.selectedDates[<span class="hljs-number">0</span>], <span class="hljs-string">'d.m.Y'</span>);
-}, <span class="hljs-literal">false</span>);</code></pre><h5>HTML</h5><pre><code><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span>
+}, <span class="hljs-literal">false</span>);</code></pre>
+              <h5>HTML</h5>
+              <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"formatDate"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"変換"</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"formatDateDisp"</span>&gt;</span>[ここに変換後の日付が表示されます]<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></code></pre><input class="fp_fmd" type="text" placeholder="Select Date.." readonly="readonly"><input type="button" id="formatDate" value="変換"><br><span id="formatDateDisp">[ここに変換後の日付が表示されます]</span><br><br><h3>jumpToDate(date, triggerChange)</h3><p>表示中のカレンダーを指定した日付の年、月に変更します。
-日付形式、Dateオブジェクトを指定、または未指定にすることができます。</p><p>未指定の場合、「最後に選択した日付」、または「今日」のいずれかになります。
-今日が<code>minDate</code>、<code>maxDate</code>の範囲外の場合は、一番近い年月になります。</p><p><code>triggerChange</code>に<code>true</code>が指定されている場合、
-値が変更された場合に限り<code>onMonthChange</code>と<code>onYearChange</code>がトリガーされます。</p><h4>デモ</h4><p><code>2015-01</code>をマウスオーバーすると、<code>2015年1月</code>のカレンダーを表示します。</p><h5>JavaScript</h5><pre><code><span class="hljs-keyword">const</span> config = {
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"formatDateDisp"</span>&gt;</span>[ここに変換後の日付が表示されます]<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></code></pre>
+              <input class="fp_fmd" type="text" placeholder="Select Date.." readonly="readonly">
+              <input type="button" id="formatDate" value="変換"><br><span id="formatDateDisp">[ここに変換後の日付が表示されます]</span><br><br>
+              <h3>jumpToDate(date, triggerChange)</h3>
+              <p>
+                表示中のカレンダーを指定した日付の年、月に変更します。
+                日付形式、Dateオブジェクトを指定、または未指定にすることができます。
+              </p>
+              <p>
+                未指定の場合、「最後に選択した日付」、または「今日」のいずれかになります。
+                今日が<code>minDate</code>、<code>maxDate</code>の範囲外の場合は、一番近い年月になります。
+              </p>
+              <p><code>triggerChange</code>に<code>true</code>が指定されている場合、
+                値が変更された場合に限り<code>onMonthChange</code>と<code>onYearChange</code>がトリガーされます。
+              </p>
+              <h4>デモ</h4>
+              <p><code>2015-01</code>をマウスオーバーすると、<code>2015年1月</code>のカレンダーを表示します。</p>
+              <h5>JavaScript</h5>
+              <pre><code><span class="hljs-keyword">const</span> config = {
   <span class="hljs-attr">defaultDate</span>: <span class="hljs-string">'today'</span>,
   <span class="hljs-attr">inline</span>: <span class="hljs-string">'true'</span>,
 }
 <span class="hljs-keyword">let</span> fp = flatpickr(<span class="hljs-string">'.flatpickr'</span>, config);
 <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'jumpToDate'</span>).addEventListener(<span class="hljs-string">'mouseover'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   fp.jumpToDate(<span class="hljs-string">'2015-01'</span>);
-}, <span class="hljs-literal">false</span>);</code></pre><h5>HTML</h5><pre><code><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"jumpToDate"</span>&gt;</span>2015-01<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span></code></pre><span id="jumpToDate">2015-01</span><input class="fp_jmp" type="text" placeholder="Select Date.." readonly="readonly"><br><h3>open()</h3><p>カレンダーを表示します。</p><h4>デモ</h4><p>開くボックスをマウスオーバーすると、カレンダーを表示します。</p><h5>JavaScript</h5><pre><code><span class="hljs-keyword">const</span> config = {
+}, <span class="hljs-literal">false</span>);</code></pre>
+              <h5>HTML</h5>
+              <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"jumpToDate"</span>&gt;</span>2015-01<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span></code></pre><span id="jumpToDate">2015-01</span>
+              <input class="fp_jmp" type="text" placeholder="Select Date.." readonly="readonly"><br>
+              <h3>open()</h3>
+              <p>カレンダーを表示します。</p>
+              <h4>デモ</h4>
+              <p>開くボックスをマウスオーバーすると、カレンダーを表示します。</p>
+              <h5>JavaScript</h5>
+              <pre><code><span class="hljs-keyword">const</span> config = {
   <span class="hljs-attr">defaultDate</span>: <span class="hljs-string">'today'</span>,
 }
 <span class="hljs-keyword">let</span> fp = flatpickr(<span class="hljs-string">'.flatpickr'</span>, config);
 <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'openCalendar'</span>).addEventListener(<span class="hljs-string">'mouseover'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   fp.open();
-}, <span class="hljs-literal">false</span>);</code></pre><h5>HTML</h5><pre><code><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"openCalendar"</span>&gt;</span>開く<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></code></pre><input class="fp_op" type="text" placeholder="Select Date.." readonly="readonly"><span id="openCalendar">開く</span><br><h3>parseDate(date, dateFormat)</h3><p>日付または、タイムスタンプからDate Objを返します。</p><h4>デモ</h4><p>「変換」ボタンを押すと、タイムスタンプを取得しDate Objを表示します。</p><h5>JavaScript</h5><pre><code><span class="hljs-keyword">const</span> config = {
+}, <span class="hljs-literal">false</span>);</code></pre>
+              <h5>HTML</h5>
+              <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"openCalendar"</span>&gt;</span>開く<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></code></pre>
+              <input class="fp_op" type="text" placeholder="Select Date.." readonly="readonly"><span id="openCalendar">開く</span><br>
+              <h3>parseDate(date, dateFormat)</h3>
+              <p>日付または、タイムスタンプからDate Objを返します。</p>
+              <h4>デモ</h4>
+              <p>「変換」ボタンを押すと、タイムスタンプを取得しDate Objを表示します。</p>
+              <h5>JavaScript</h5>
+              <pre><code><span class="hljs-keyword">const</span> config = {
   <span class="hljs-attr">defaultDate</span>: <span class="hljs-string">'today'</span>,
 }
 <span class="hljs-keyword">let</span> fp = flatpickr(<span class="hljs-string">'.flatpickr'</span>, config);
 <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'parseDate'</span>).addEventListener(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'parseDateDisp'</span>).innerHTML = fp.parseDate(<span class="hljs-built_in">Date</span>.now());
-}, <span class="hljs-literal">false</span>);</code></pre><h5>HTML</h5><pre><code><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span>
+}, <span class="hljs-literal">false</span>);</code></pre>
+              <h5>HTML</h5>
+              <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"parseDate"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"変換"</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"parseDateDisp"</span>&gt;</span>[ここに変換後の日付が表示されます]<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></code></pre><input class="fp_pd" type="text" placeholder="Select Date.." readonly="readonly"><input type="button" id="parseDate" value="変換"><br><span id="parseDateDisp">[ここに変換後の日付が表示されます]</span><br><h3>redraw()</h3><p>カレンダーを再描画します。ほぼ使うことは無いでしょう。</p><h3>set(option, value)</h3><p>カレンダーに設定されている<code>option</code>を<code>value</code>に書き換えます。
-必要に応じてカレンダーを再描画します。</p><h4>デモ</h4><p>モード変更ボックスをマウスオーバーすると、日付選択モードが範囲選択モードになります。</p><h5>JavaScript</h5><pre><code><span class="hljs-keyword">const</span> config = {
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"parseDateDisp"</span>&gt;</span>[ここに変換後の日付が表示されます]<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></code></pre>
+              <input class="fp_pd" type="text" placeholder="Select Date.." readonly="readonly">
+              <input type="button" id="parseDate" value="変換"><br><span id="parseDateDisp">[ここに変換後の日付が表示されます]</span><br>
+              <h3>redraw()</h3>
+              <p>カレンダーを再描画します。ほぼ使うことは無いでしょう。</p>
+              <h3>set(option, value)</h3>
+              <p>カレンダーに設定されている<code>option</code>を<code>value</code>に書き換えます。
+                必要に応じてカレンダーを再描画します。
+              </p>
+              <h4>デモ</h4>
+              <p>モード変更ボックスをマウスオーバーすると、日付選択モードが範囲選択モードになります。</p>
+              <h5>JavaScript</h5>
+              <pre><code><span class="hljs-keyword">const</span> config = {
   <span class="hljs-attr">defaultDate</span>: <span class="hljs-string">'today'</span>,
 }
 <span class="hljs-keyword">let</span> fp = flatpickr(<span class="hljs-string">'.flatpickr'</span>, config);
 <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'fp_set'</span>).addEventListener(<span class="hljs-string">'mouseover'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   fp.set(<span class="hljs-string">'mode'</span>, <span class="hljs-string">'range'</span>);
-}, <span class="hljs-literal">false</span>);</code></pre><h5>HTML</h5><pre><code><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"fp_set"</span>&gt;</span>モード変更<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></code></pre><input class="fp_set" type="text" placeholder="Select Date.." readonly="readonly"><span id="fp_set">モード変更</span><br><br><h3>setDate(date, triggerChange, dateStrFormat)</h3><p>日付を指定した<code>date</code>に変更します。日付文字列、日付、日付の配列を指定することができます。<br>必要に応じて、<code>triggerChange</code>に<code>true</code>を指定することで、<code>onChange</code>を発火させることができます。
-また、<code>dateFormat</code>意外の書式で日付を渡す場合は<code>dateStrFormat</code>に<code>"m/d/Y"</code>というように日付書式指定を指定します。</p><h4>デモ</h4><p>変更ボックスをマウスオーバーすると、日付が<code>2015-01-01</code>に変更され、
-<code>onChange</code>で指定した処理によって、<code>2015-01-01</code>のDate Objが表示されます。</p><h5>JavaScript</h5><pre><code><span class="hljs-keyword">const</span> config = {
+}, <span class="hljs-literal">false</span>);</code></pre>
+              <h5>HTML</h5>
+              <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"fp_set"</span>&gt;</span>モード変更<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></code></pre>
+              <input class="fp_set" type="text" placeholder="Select Date.." readonly="readonly"><span id="fp_set">モード変更</span><br><br>
+              <h3>setDate(date, triggerChange, dateStrFormat)</h3>
+              <p>日付を指定した<code>date</code>に変更します。日付文字列、日付、日付の配列を指定することができます。<br>必要に応じて、<code>triggerChange</code>に<code>true</code>を指定することで、<code>onChange</code>を発火させることができます。
+                また、<code>dateFormat</code>意外の書式で日付を渡す場合は<code>dateStrFormat</code>に<code>"m/d/Y"</code>というように日付書式指定を指定します。
+              </p>
+              <h4>デモ</h4>
+              <p>変更ボックスをマウスオーバーすると、日付が<code>2015-01-01</code>に変更され、
+                <code>onChange</code>で指定した処理によって、<code>2015-01-01</code>のDate Objが表示されます。
+              </p>
+              <h5>JavaScript</h5>
+              <pre><code><span class="hljs-keyword">const</span> config = {
   <span class="hljs-attr">defaultDate</span>: <span class="hljs-string">'today'</span>,
   <span class="hljs-attr">onChange</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">selectedDates, dateStr, instance</span>) </span>{
     <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'setDateDisp'</span>).innerHTML = selectedDates;
@@ -125,18 +412,58 @@ calendar.changeMonth(<span class="hljs-number">0</span>, <span class="hljs-liter
 <span class="hljs-keyword">let</span> fp = flatpickr(<span class="hljs-string">'.flatpickr'</span>, config);
 <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'setDate'</span>).addEventListener(<span class="hljs-string">'mouseover'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   fp_sd.setDate(<span class="hljs-string">'2015-01-01'</span>, <span class="hljs-literal">true</span>);
-}, <span class="hljs-literal">false</span>);</code></pre><h5>HTML</h5><pre><code><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span>
+}, <span class="hljs-literal">false</span>);</code></pre>
+              <h5>HTML</h5>
+              <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"setDate"</span>&gt;</span>変更<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"setDateDisp"</span>&gt;</span>[ここに変更後の日付が表示されます]<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></code></pre><input class="setDate" type="text" placeholder="Select Date.." readonly="readonly"><span id="setDate">変更</span><br><span id="setDateDisp">[ここに変更後の日付が表示されます]</span><br><br><h3>toggle()</h3><p>カレンダーを表示/非表示を切替えます。</p><h4>デモ</h4><p>表示/非表示ボックスをマウスオーバーすると、カレンダーの表示/非表示を切替えます。</p><h5>JavaScript</h5><pre><code><span class="hljs-keyword">const</span> config = {
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"setDateDisp"</span>&gt;</span>[ここに変更後の日付が表示されます]<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></code></pre>
+              <input class="setDate" type="text" placeholder="Select Date.." readonly="readonly"><span id="setDate">変更</span><br><span id="setDateDisp">[ここに変更後の日付が表示されます]</span><br><br>
+              <h3>toggle()</h3>
+              <p>カレンダーを表示/非表示を切替えます。</p>
+              <h4>デモ</h4>
+              <p>表示/非表示ボックスをマウスオーバーすると、カレンダーの表示/非表示を切替えます。</p>
+              <h5>JavaScript</h5>
+              <pre><code><span class="hljs-keyword">const</span> config = {
   <span class="hljs-attr">defaultDate</span>: <span class="hljs-string">'today'</span>,
 }
 <span class="hljs-keyword">let</span> fp = flatpickr(<span class="hljs-string">'.flatpickr'</span>, config);
 <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'toggleCalendar'</span>).addEventListener(<span class="hljs-string">'mouseover'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   fp.toggle();
-}, <span class="hljs-literal">false</span>);</code></pre><h5>HTML</h5><pre><code><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"toggleCalendar"</span>&gt;</span>表示/非表示<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></code></pre><input class="fp_tgl" type="text" placeholder="Select Date.." readonly="readonly"><span id="toggleCalendar">表示/非表示</span><h2 id="elements">要素</h2><h3>input</h3><p>flatpickrに関連付けられた<code>input</code>要素です。</p><h3>calendarContainer</h3><p>説明するまでもありませんが、カレンダーそのものです。
-この要素は<code>div.flatpickr-calendar</code>です。</p><h3>prevMonthNav</h3><p>前月を表示するナビゲーションカーソルです。</p><h3>nextMonthNav</h3><p>次月を表示するナビゲーションカーソルです。</p><h3>currentMonthElement</h3><p>現在の「月」を保持している<code>span</code>要素です。</p><h3>currentYearElement</h3><p>現在の「年」を保持した<code>input</code>要素です。</p><h3>days</h3><p>全ての「日」の要素です。</p><h4>デモ</h4><p>テキストボックスをクリックすると、カレンダーヘッダーの内容を、以下のように書き換えます。<ul><li><code>&lt;</code>を「前月」</li><li><code>&gt;</code>を「来月」</li><li>月表示を「今月」</li><li>年表示を「今年」</li></ul></p><h5>JavaScript</h5><pre><code><span class="hljs-keyword">const</span> config = {
+}, <span class="hljs-literal">false</span>);</code></pre>
+              <h5>HTML</h5>
+              <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"toggleCalendar"</span>&gt;</span>表示/非表示<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></code></pre>
+              <input class="fp_tgl" type="text" placeholder="Select Date.." readonly="readonly"><span id="toggleCalendar">表示/非表示</span>
+              <h2 id="elements">要素</h2>
+              <h3>input</h3>
+              <p>flatpickrに関連付けられた<code>input</code>要素です。</p>
+              <h3>calendarContainer</h3>
+              <p>
+                説明するまでもありませんが、カレンダーそのものです。
+                この要素は<code>div.flatpickr-calendar</code>です。
+              </p>
+              <h3>prevMonthNav</h3>
+              <p>前月を表示するナビゲーションカーソルです。</p>
+              <h3>nextMonthNav</h3>
+              <p>次月を表示するナビゲーションカーソルです。</p>
+              <h3>currentMonthElement</h3>
+              <p>現在の「月」を保持している<code>span</code>要素です。</p>
+              <h3>currentYearElement</h3>
+              <p>現在の「年」を保持した<code>input</code>要素です。</p>
+              <h3>days</h3>
+              <p>全ての「日」の要素です。</p>
+              <h4>デモ</h4>
+              <p>テキストボックスをクリックすると、カレンダーヘッダーの内容を、以下のように書き換えます。
+                <ul>
+                  <li><code>&lt;</code>を「前月」</li>
+                  <li><code>&gt;</code>を「来月」</li>
+                  <li>月表示を「今月」</li>
+                  <li>年表示を「今年」</li>
+                </ul>
+              </p>
+              <h5>JavaScript</h5>
+              <pre><code><span class="hljs-keyword">const</span> config = {
   <span class="hljs-attr">defaultDate</span>: <span class="hljs-string">'today'</span>,
 }
 <span class="hljs-keyword">let</span> fp = flatpickr(<span class="hljs-string">'.flatpickr'</span>, config);
@@ -145,8 +472,64 @@ calendar.changeMonth(<span class="hljs-number">0</span>, <span class="hljs-liter
   fp.nextMonthNav.innerHTML = <span class="hljs-string">'来月'</span>;
   fp.currentMonthElement.innerHTML = <span class="hljs-string">'今月'</span>;
   fp.currentYearElement.value = <span class="hljs-string">'今年'</span>;
-}, <span class="hljs-literal">false</span>);</code></pre><h5>HTML</h5><pre><code><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fp_elem"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span></code></pre><input class="fp_elem" id="fp_elem" type="text" placeholder="Select Date.." readonly="readonly"><h2 id="useful-prototype-methods">便利なstaticメソッド</h2><p>flatpickrではインスタンス生成せずに日付フォーマッタを利用することができます。</p><p><code>moment.js</code>ほど多機能ではありませんが、ほとんどの場合において必要十分な機能を持っています。</p><br><h3>flatpickr.parseDate(dateStr, dateFormat)</h3><p><code>Date</code>オブジェクトを返します。</p><h4>デモ</h4><h5>JavaScript</h5><pre><code><span class="hljs-keyword">let</span> date = flatpickr.parseDate(<span class="hljs-string">"2016-10-20"</span>, <span class="hljs-string">"Y-m-d"</span>);
-<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'disp_date'</span>).innerHTML = date;</code></pre><h5>HTML</h5><pre><code><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"disp_date"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre><p id="fp_prs_date_2016"></p><br><br><h5>JavaScript</h5><pre><code><span class="hljs-keyword">let</span> date = flatpickr.parseDate(<span class="hljs-string">"31/01/1995"</span>, <span class="hljs-string">"d/m/Y"</span>);
-<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'disp_date'</span>).innerHTML = date;</code></pre><h5>HTML</h5><pre><code><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"disp_date"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre><p id="fp_prs_date_1995"></p><br><br><h3>flatpickr.formatDate(dateObj, dateFormat)</h3><p><code>Date</code>オブジェクトを日付形式に変換します。</p><h4>デモ</h4><h5>JavaScript</h5><pre><code><span class="hljs-keyword">let</span> date = flatpickr.formatDate(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(), <span class="hljs-string">"Y-m-d h:i K"</span>);
-<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'disp_date'</span>).innerHTML = date;</code></pre><h5>HTML</h5><pre><code><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"disp_date"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre><p id="fp_fmt_date_now"></p><br><div class="license"><p>&copy; 2017
- Gregory Petrosyan Released under the <a href="https://github.com/chmln/flatpickr/blob/master/LICENSE.md">MIT license</a></p><p>このコンテンツはGregory Petrosyan(chmln)による<a href="https://chmln.github.io/flatpickr/">flatpickrドキュメント</a>を翻訳/改変したものです。</p></div><span class="src" data-src="./js/theFlatpickrInstance.js" hidden></span></div></div></div></div><footer><span> &copy; <span id="copy_year">2017</span> tobijibu</span></footer></div><noscript id="deferred-styles"><link href="./css/lazy.css" rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/confirmDate/confirmDate.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/style.css"></noscript><script src="./js/main.js" defer></script><script src="https://cdn.jsdelivr.net/npm/flatpickr"></script><script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.min.js"></script><script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/confirmDate/confirmDate.min.js"></script><script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/weekSelect/weekSelect.min.js"></script><script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/rangePlugin.min.js"></script><script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/minMaxTimePlugin.min.js"></script><script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/index.js"></script><div id="src" hidden></div></body></html>
+}, <span class="hljs-literal">false</span>);</code></pre>
+              <h5>HTML</h5>
+              <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fp_elem"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"flatpickr"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select Date.."</span> <span class="hljs-attr">readonly</span>=<span class="hljs-string">"readonly"</span>&gt;</span></code></pre>
+              <input class="fp_elem" id="fp_elem" type="text" placeholder="Select Date.." readonly="readonly">
+              <h2 id="useful-prototype-methods">便利なstaticメソッド</h2>
+              <p>flatpickrではインスタンス生成せずに日付フォーマッタを利用することができます。</p>
+              <p><code>moment.js</code>ほど多機能ではありませんが、ほとんどの場合において必要十分な機能を持っています。</p><br>
+              <h3>flatpickr.parseDate(dateStr, dateFormat)</h3>
+              <p><code>Date</code>オブジェクトを返します。</p>
+              <h4>デモ</h4>
+              <h5>JavaScript</h5>
+              <pre><code><span class="hljs-keyword">let</span> date = flatpickr.parseDate(<span class="hljs-string">"2016-10-20"</span>, <span class="hljs-string">"Y-m-d"</span>);
+<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'disp_date'</span>).innerHTML = date;</code></pre>
+              <h5>HTML</h5>
+              <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"disp_date"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+              <p id="fp_prs_date_2016"></p><br><br>
+              <h5>JavaScript</h5>
+              <pre><code><span class="hljs-keyword">let</span> date = flatpickr.parseDate(<span class="hljs-string">"31/01/1995"</span>, <span class="hljs-string">"d/m/Y"</span>);
+<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'disp_date'</span>).innerHTML = date;</code></pre>
+              <h5>HTML</h5>
+              <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"disp_date"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+              <p id="fp_prs_date_1995"></p><br><br>
+              <h3>flatpickr.formatDate(dateObj, dateFormat)</h3>
+              <p><code>Date</code>オブジェクトを日付形式に変換します。</p>
+              <h4>デモ</h4>
+              <h5>JavaScript</h5>
+              <pre><code><span class="hljs-keyword">let</span> date = flatpickr.formatDate(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(), <span class="hljs-string">"Y-m-d h:i K"</span>);
+<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'disp_date'</span>).innerHTML = date;</code></pre>
+              <h5>HTML</h5>
+              <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"disp_date"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+              <p id="fp_fmt_date_now"></p><br>
+              <div class="license">
+                <p>
+                  &copy; 2017
+                   Gregory Petrosyan Released under the <a href="https://github.com/chmln/flatpickr/blob/master/LICENSE.md">MIT license</a>
+                </p>
+                <p>このコンテンツはGregory Petrosyan(chmln)による<a href="https://chmln.github.io/flatpickr/">flatpickrドキュメント</a>を翻訳/改変したものです。</p>
+              </div><span class="src" data-src="./js/theFlatpickrInstance.js" hidden></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer><span>&copy; <span id="copy_year">2017</span> tobijibu</span></footer>
+    </div>
+    <noscript id="deferred-styles">
+      <link href="./css/lazy.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/confirmDate/confirmDate.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/style.css">
+    </noscript>
+    <script src="./js/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/confirmDate/confirmDate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/weekSelect/weekSelect.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/rangePlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/minMaxTimePlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/index.js"></script>
+    <div id="src" hidden></div>
+  </body>
+</html>
